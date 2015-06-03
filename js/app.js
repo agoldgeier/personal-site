@@ -11,6 +11,10 @@ angular.module('2fCollective', ['ngRoute', 'ngMessages'])
 		    templateUrl: 'views/artists.html',
 		    controller: 'ArtistsCtrl'
 		  })
+		  .when('/artists/:id', {
+		    templateUrl: 'views/artists.html',
+		    controller: 'ArtistsCtrl'
+		  })
 		  .when('/albums', {
 		    templateUrl: 'views/albums.html',
 		    controller: 'AlbumsCtrl'
