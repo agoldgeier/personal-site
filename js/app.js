@@ -1,7 +1,7 @@
-angular.module('2fCollective', ['ngRoute', 'ngMessages'])
-  .config(function($routeProvider, $locationProvider) {
+var app = angular.module('2fCollective', ['ngRoute', 'ngMessages']);
 
-  	// Provides routing
+// Routing
+app.config(function($routeProvider, $locationProvider) {
   	$routeProvider
 		  .when('/', {
 		    templateUrl: 'views/home.html',
@@ -11,9 +11,9 @@ angular.module('2fCollective', ['ngRoute', 'ngMessages'])
 		    templateUrl: 'views/artists.html',
 		    controller: 'ArtistsCtrl'
 		  })
-		  .when('/artists/:id', {
-		    templateUrl: 'views/artists.html',
-		    controller: 'ArtistsCtrl'
+		  .when('/artists/bxtr', {
+		    templateUrl: 'views/artists/bxtr.html',
+		    controller: 'ArtistCtrl'
 		  })
 		  .when('/albums', {
 		    templateUrl: 'views/albums.html',
@@ -35,6 +35,16 @@ angular.module('2fCollective', ['ngRoute', 'ngMessages'])
 
 
 		  // UNCOMMENT TO GET RID OF #'s
-		  // $locationProvider.html5Mode(true);
- 
-  });
+		  // $locationProvider.html5Mode(true); 
+});
+
+// Controllers
+
+// Directives
+// app.directive("artistTile", function() {
+// 	// this is repeated on a grid in artists.html
+// 	return {
+// 		restrict: 'E',
+// 		templateUrl: "artist-tile.html"
+// 	};
+// });

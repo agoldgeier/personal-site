@@ -1,6 +1,11 @@
 angular.module('2fCollective')
   .controller('ArtistsCtrl', function($scope, Page) {
 
+  var artists;
+  $.getJSON("artists.json", function(data) {
+     artists = data;
+  });
+
     Page.setTitle('Artists');
 
   	$scope.name = 'bxtr'; // temporary
