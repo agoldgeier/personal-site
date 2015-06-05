@@ -26,57 +26,18 @@
 <!-- Page Features -->
 <div class="row text-center">
 
-    <div class="col-md-3 col-sm-6 hero-feature">
+    <div class="col-md-3 col-sm-6 hero-feature" ng-repeat="album in featuredAlbums">
         <div class="thumbnail">
-            <img src="http://placehold.it/800x500" alt="">
-            <div class="caption">
-                <h3>Album</h3>
-                <p>Artist</p>
-                <p>
-                    <a href="#" class="btn btn-primary">Listen</a>
-                </p>
-            </div>
+            <a href="#/artists/{{album.link}}" data-id="{{album.name}}" ng-click="setAlbum($event)">
+              <img ng-src="{{album.pic}}" style="width: 100%">
+              <h4>{{album.name}}</h5>
+              <p>{{album.artist}}</p>
+              <a href="#/artists/{{album.link}}" data-id="{{album.name}}" ng-click="setAlbum($event)"class="btn btn-primary">Listen</a>
+              <br>
+            </a>
         </div>
     </div>
 
-    <div class="col-md-3 col-sm-6 hero-feature">
-        <div class="thumbnail">
-            <img src="http://placehold.it/800x500" alt="">
-            <div class="caption">
-                <h3>Album</h3>
-                <p>Artist</p>
-                <p>
-                    <a href="#" class="btn btn-primary">Listen</a>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-3 col-sm-6 hero-feature">
-        <div class="thumbnail">
-            <img src="http://placehold.it/800x500" alt="">
-            <div class="caption">
-                <h3>Album</h3>
-                <p>Artist</p>
-                <p>
-                    <a href="#" class="btn btn-primary">Listen</a>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-3 col-sm-6 hero-feature">
-        <div class="thumbnail">
-            <img src="http://placehold.it/800x500" alt="">
-            <div class="caption">
-                <h3>Album</h3>
-                <p>Artist</p>
-                <p>
-                    <a href="#" class="btn btn-primary">Listen</a>
-                </p>
-            </div>
-        </div>
-    </div>
 
 </div>
-<!-- /.row -->
+<!-- /.row
