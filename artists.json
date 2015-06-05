@@ -1,5 +1,5 @@
-[
-	{
+{
+	"BXTR": {
 	"name": "BXTR",
 	"pic": "/img/BXTR-bio.jpg",
 	"bio": "Lorem ipsum blah blah",
@@ -21,7 +21,7 @@
 		}
 		]
 	},
-	{
+	"BXTR2": {
 	"name": "BXTR",
 	"pic": "/img/BXTR-bio.jpg",
 	"bio": "Lorem ipsum blah blah",
@@ -44,7 +44,7 @@
 
 		]
 	},
-	{
+	"BXTR3": {
 	"name": "BXTR",
 	"pic": "/img/BXTR-bio.jpg",
 	"bio": "Lorem ipsum blah blah",
@@ -67,4 +67,4 @@
 
 		]
 	}
-]
+}
