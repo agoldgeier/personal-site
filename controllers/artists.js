@@ -1,5 +1,10 @@
 angular.module('2fCollective')
-  .controller('ArtistsCtrl', function($scope, Page) {
+  .controller('ArtistsCtrl', function($scope, Page, $routeParams, $http) {
+
+
+    $http.get('artists.json').success(function(data) {
+      $scope.artists = data;
+    });
 
     Page.setTitle('Artists');
 

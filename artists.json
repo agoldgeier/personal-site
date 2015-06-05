@@ -1,8 +1,8 @@
-[
-	{
+{
+	"BXTR": {
 	"name": "BXTR",
 	"pic": "/img/BXTR-bio.jpg",
-	"bio": "Lorem ipsum blah blah"
+	"bio": "Lorem ipsum blah blah",
 	"albums": [
 		{
 		"title": "The River Looks Beautiful",
@@ -21,10 +21,10 @@
 		}
 		]
 	},
-	{
+	"BXTR2": {
 	"name": "BXTR",
 	"pic": "/img/BXTR-bio.jpg",
-	"bio": "Lorem ipsum blah blah"
+	"bio": "Lorem ipsum blah blah",
 	"albums": [
 		{
 		"title": "The River Looks Beautiful",
@@ -44,10 +44,10 @@
 
 		]
 	},
-	{
+	"BXTR3": {
 	"name": "BXTR",
 	"pic": "/img/BXTR-bio.jpg",
-	"bio": "Lorem ipsum blah blah"
+	"bio": "Lorem ipsum blah blah",
 	"albums": [
 		{
 		"title": "The River Looks Beautiful",
@@ -67,4 +67,4 @@
 
 		]
 	}
-]
+}
