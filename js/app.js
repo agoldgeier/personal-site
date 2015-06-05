@@ -21,11 +21,11 @@ angular.module('2fCollective', ['ngRoute', 'ngMessages'])
 		  })
 		  .when('/videos', {
 		    templateUrl: 'views/videos.html',
-		    controller: 'VidCtrl'
+		    controller: 'VideosCtrl'
 		  })
-		  .when('/contact', {
-		    templateUrl: 'views/contact.html',
-		    controller: 'ContactCtrl'
+		  .when('/contacts', {
+		    templateUrl: 'views/contacts.html',
+		    controller: 'ContactsCtrl'
 		  })
 		  .when('/blog', {
 		    templateUrl: 'views/blog.html',

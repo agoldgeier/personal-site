@@ -1,6 +1,6 @@
 angular.module('2fCollective')
-  .controller('HomeCtrl', function($scope) {
+  .controller('HomeCtrl', function($scope, Page) {
 
-  	$scope.title = 'Hi there!';
+  	Page.setTitle('Home');
  
   });

@@ -1,5 +1,7 @@
 angular.module('2fCollective')
-  .controller('ArtistsCtrl', function($scope) {
+  .controller('ArtistsCtrl', function($scope, Page) {
+
+    Page.setTitle('Artists');
 
   	$scope.name = 'bxtr'; // temporary
 
