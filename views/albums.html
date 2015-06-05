@@ -1,0 +1,12 @@
+<h2>Albums</h2>
+<div class="row">
+  <div class="col-md-4" ng-repeat="album in albums">
+    <a href="#/artists/{{album.link}}" data-id="{{album.name}}" ng-click="setAlbum($event)">
+      <img ng-src="{{album.pic}}" style="width: 100%">
+      <h4>{{album.name}}</h4>
+      <h5>{{album.artist}}</h5>
+      <br>
+    </a>
+  </div>
+</div>
+

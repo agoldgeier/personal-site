@@ -66,5 +66,72 @@
 		}
 
 		]
+	},
+	"BXTR4": {
+	"name": "BXTR",
+	"pic": "/img/BXTR-bio.jpg",
+	"bio": "Lorem ipsum blah blah",
+	"albums": [
+		{
+		"title": "The River Looks Beautiful",
+		"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
+		"pic": "/img/BXTR-the-river-looks-beautiful"
+		},
+		{
+		"title": "The River Looks Beautiful",
+		"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
+		"pic": "/img/BXTR-the-river-looks-beautiful"
+		},
+		{
+		"title": "The River Looks Beautiful",
+		"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
+		"pic": "/img/BXTR-the-river-looks-beautiful"
+		}
+
+		]
+	},
+	"BXTR5": {
+		"name": "BXTR",
+		"pic": "/img/BXTR-bio.jpg",
+		"bio": "Lorem ipsum blah blah",
+		"albums": [
+			{
+			"title": "The River Looks Beautiful",
+			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
+			"pic": "/img/BXTR-the-river-looks-beautiful"
+			},
+			{
+			"title": "The River Looks Beautiful",
+			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
+			"pic": "/img/BXTR-the-river-looks-beautiful"
+			},
+			{
+			"title": "The River Looks Beautiful",
+			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
+			"pic": "/img/BXTR-the-river-looks-beautiful"
+			}
+		]
+	},
+	"BXTR6": {
+		"name": "BXTR",
+		"pic": "/img/BXTR-bio.jpg",
+		"bio": "Lorem ipsum blah blah",
+		"albums": [
+			{
+			"title": "The River Looks Beautiful",
+			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
+			"pic": "/img/BXTR-the-river-looks-beautiful"
+			},
+			{
+			"title": "The River Looks Beautiful",
+			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
+			"pic": "/img/BXTR-the-river-looks-beautiful"
+			},
+			{
+			"title": "The River Looks Beautiful",
+			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
+			"pic": "/img/BXTR-the-river-looks-beautiful"
+			}
+		]
 	}
 }
