@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
 	"BXTR": {
 	"name": "BXTR",
@@ -65,6 +66,73 @@
 		"pic": "/img/BXTR-the-river-looks-beautiful"
 		}
 
+=======
+var artists = [
+	{
+		"name": "BXTR",
+		"pic": "/img/BXTR-bio.jpg",
+		"bio": "Lorem ipsum blah blah",
+		"albums": [
+			{
+			"title": "The River Looks Beautiful",
+			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
+			"pic": "/img/BXTR-the-river-looks-beautiful"
+			},
+			{
+			"title": "The River Looks Beautiful",
+			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
+			"pic": "/img/BXTR-the-river-looks-beautiful"
+			},
+			{
+			"title": "The River Looks Beautiful",
+			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
+			"pic": "/img/BXTR-the-river-looks-beautiful"
+			}
+		]
+	},
+	{
+		"name": "BXTR1",
+		"pic": "/img/BXTR-bio.jpg",
+		"bio": "Lorem ipsum blah blah",
+		"albums": [
+			{
+			"title": "The River Looks Beautiful",
+			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
+			"pic": "/img/BXTR-the-river-looks-beautiful"
+			},
+			{
+			"title": "The River Looks Beautiful",
+			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
+			"pic": "/img/BXTR-the-river-looks-beautiful"
+			},
+			{
+			"title": "The River Looks Beautiful",
+			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
+			"pic": "/img/BXTR-the-river-looks-beautiful"
+			}
+		]
+	},
+	{
+		"name": "BXTR2",
+		"pic": "/img/BXTR-bio.jpg",
+		"bio": "Lorem ipsum blah blah",
+		"albums": [
+			{
+			"title": "The River Looks Beautiful",
+			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
+			"pic": "/img/BXTR-the-river-looks-beautiful"
+			},
+			{
+			"title": "The River Looks Beautiful",
+			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
+			"pic": "/img/BXTR-the-river-looks-beautiful"
+			},
+			{
+			"title": "The River Looks Beautiful",
+			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
+			"pic": "/img/BXTR-the-river-looks-beautiful"
+			}
+>>>>>>> Stashed changes
 		]
 	},
 	"BXTR4": {
@@ -134,4 +202,8 @@
 			}
 		]
 	}
+<<<<<<< Updated upstream
 }
+=======
+];
+>>>>>>> Stashed changes

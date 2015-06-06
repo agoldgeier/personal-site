@@ -11,11 +11,21 @@ app.config(function($routeProvider, $locationProvider) {
 		    templateUrl: 'views/artists.html',
 		    controller: 'ArtistsCtrl'
 		  })
+<<<<<<< Updated upstream
 		  .when('/artists/BXTR', {
 		    templateUrl: 'views/artists/bxtr.html',
 		    controller: 'ArtistCtrl'
+=======
+		  .when('/artists/:artist', {
+		    templateUrl: 'views/artists.html',
+		    controller: 'ArtistsCtrl'
+>>>>>>> Stashed changes
 		  })
 		  .when('/albums', {
+		    templateUrl: 'views/albums.html',
+		    controller: 'AlbumsCtrl'
+		  })
+		  .when('/albums/:album', {
 		    templateUrl: 'views/albums.html',
 		    controller: 'AlbumsCtrl'
 		  })
