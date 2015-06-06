@@ -1,0 +1,28 @@
+{
+  "name": "2fcollective",
+  "version": "1.0.0",
+  "description": "2fcollective",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.12.4",
+    "grunt-cli": "^0.1.13",
+    "gzippo": "^0.2.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devintyler/2fcollective.git"
+  },
+  "author": "Devin and Aviv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devintyler/2fcollective/issues"
+  },
+  "homepage": "https://github.com/devintyler/2fcollective"
+}
