@@ -1,19 +1,9 @@
 angular.module('2fCollective')
   .controller('ArtistsCtrl', function($scope, Page, $routeParams, $http) {
 
-<<<<<<< Updated upstream
-
     $http.get('artists.json').success(function(data) {
       $scope.artists = data;
     });
-=======
-    // Not working
-    $http.get('test-artist.json').success(function(data) {
-      $scope.artist = data;
-    });
-
-    console.log($scope.artist.bio);
->>>>>>> Stashed changes
 
     Page.setTitle('Artists');
 
