@@ -2,7 +2,7 @@
 	"BXTR": {
 	"name": "BXTR",
 	"pic": "/img/BXTR-bio.jpg",
-	"bio": "Lorem ipsum blah blah",
+	"bkgd": "/img/BXTR-bkgd.jpg",
 	"albums": [
 		{
 		"title": "The River Looks Beautiful",
@@ -10,128 +10,108 @@
 		"pic": "/img/BXTR-the-river-looks-beautiful"
 		},
 		{
-		"title": "The River Looks Beautiful",
-		"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
-		"pic": "/img/BXTR-the-river-looks-beautiful"
-		},
-		{
-		"title": "The River Looks Beautiful",
-		"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
-		"pic": "/img/BXTR-the-river-looks-beautiful"
+		"title": "Beat Tape 1",
+		"link": "hhttps://soundcloud.com/bxtr/sets/beat-tape-1",
+		"pic": "/img/BXTR-beat-tape-1"
 		}
 		]
 	},
-	"BXTR2": {
-	"name": "BXTR",
-	"pic": "/img/BXTR-bio.jpg",
-	"bio": "Lorem ipsum blah blah",
+	"Henry Ott": {
+	"name": "Henry Ott",
+	"pic": "/img/henry-ott.jpg",
+	"bkgd": "/img/henry-ott-bkgd.jpg",
 	"albums": [
 		{
-		"title": "The River Looks Beautiful",
-		"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
-		"pic": "/img/BXTR-the-river-looks-beautiful"
+		"title": "Tulpa EP",
+		"link": "https://henryott.bandcamp.com/album/tulpa-ep",
+		"pic": "/img/henry-ott-tulpa.jpg"
 		},
 		{
-		"title": "The River Looks Beautiful",
-		"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
-		"pic": "/img/BXTR-the-river-looks-beautiful"
+		"title": "Yantra EP",
+		"link": "https://henryott.bandcamp.com/album/yantra-ep",
+		"pic": "/img/henry-ott-yantra.jpg"
 		},
 		{
-		"title": "The River Looks Beautiful",
-		"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
-		"pic": "/img/BXTR-the-river-looks-beautiful"
+		"title": "Things Moving",
+		"link": "https://henryott.bandcamp.com/album/things-moving",
+		"pic": "/img/henry-ott-things-moving.jpg"
 		}
 
 		]
 	},
-	"BXTR3": {
-	"name": "BXTR",
-	"pic": "/img/BXTR-bio.jpg",
-	"bio": "Lorem ipsum blah blah",
+	"Nick Fraser": {
+	"name": "Nick Fraser",
+	"pic": "/img/nick-fraser.jpg",
+	"bkgd": "/img/nick-fraser-bkgd.jpg",
 	"albums": [
 		{
-		"title": "The River Looks Beautiful",
-		"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
-		"pic": "/img/BXTR-the-river-looks-beautiful"
-		},
-		{
-		"title": "The River Looks Beautiful",
-		"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
-		"pic": "/img/BXTR-the-river-looks-beautiful"
-		},
-		{
-		"title": "The River Looks Beautiful",
-		"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
-		"pic": "/img/BXTR-the-river-looks-beautiful"
+		"title": "Error Scheme EP",
+		"link": "https://soundcloud.com/nickfrasernyc/sets/error-scheme",
+		"pic": "/img/nick-fraser-error-scheme.jpg"
 		}
-
 		]
 	},
-	"BXTR4": {
-	"name": "BXTR",
-	"pic": "/img/BXTR-bio.jpg",
-	"bio": "Lorem ipsum blah blah",
+	"Mike Hickey": {
+	"name": "Mike Hickey",
+	"pic": "/img/mike-hickey.jpg",
+	"bkgd": "/img/mike-hickey-bkgd.jpg",
 	"albums": [
 		{
-		"title": "The River Looks Beautiful",
-		"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
-		"pic": "/img/BXTR-the-river-looks-beautiful"
-		},
-		{
-		"title": "The River Looks Beautiful",
-		"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
-		"pic": "/img/BXTR-the-river-looks-beautiful"
-		},
-		{
-		"title": "The River Looks Beautiful",
-		"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
-		"pic": "/img/BXTR-the-river-looks-beautiful"
 		}
-
 		]
 	},
-	"BXTR5": {
-		"name": "BXTR",
-		"pic": "/img/BXTR-bio.jpg",
-		"bio": "Lorem ipsum blah blah",
-		"albums": [
-			{
-			"title": "The River Looks Beautiful",
-			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
-			"pic": "/img/BXTR-the-river-looks-beautiful"
-			},
-			{
-			"title": "The River Looks Beautiful",
-			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
-			"pic": "/img/BXTR-the-river-looks-beautiful"
-			},
-			{
-			"title": "The River Looks Beautiful",
-			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
-			"pic": "/img/BXTR-the-river-looks-beautiful"
-			}
+	"spctra": {
+	"name": "spctra",
+	"pic": "/img/spctra.jpg",
+	"bkgd": "/img/spctra-bkgd.jpg",
+	"albums": [
+		{
+		}
 		]
 	},
-	"BXTR6": {
-		"name": "BXTR",
-		"pic": "/img/BXTR-bio.jpg",
-		"bio": "Lorem ipsum blah blah",
-		"albums": [
-			{
-			"title": "The River Looks Beautiful",
-			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
-			"pic": "/img/BXTR-the-river-looks-beautiful"
-			},
-			{
-			"title": "The River Looks Beautiful",
-			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
-			"pic": "/img/BXTR-the-river-looks-beautiful"
-			},
-			{
-			"title": "The River Looks Beautiful",
-			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
-			"pic": "/img/BXTR-the-river-looks-beautiful"
-			}
+	"TRW": {
+	"name": "TRW",
+	"pic": "/img/TRW.jpg",
+	"bkgd": "/img/TRW-bkgd.jpg",
+	"albums": [
+		{
+		}
+		]
+	},
+	"Sleepy James": {
+	"name": "Sleepy James",
+	"pic": "/img/sleepy-james.jpg",
+	"bkgd": "/img/sleepy-james-bkgd.jpg",
+	"albums": [
+		{
+		}
+		]
+	},
+	"Moon Tan": {
+	"name": "Moon Tan",
+	"pic": "/img/moon-tan.jpg",
+	"bkgd": "/img/moon-tan-bkgd.jpg",
+	"albums": [
+		{
+		}
+		]
+	},
+	"Umbrellatop": {
+	"name": "Umbrellatop",
+	"pic": "/img/umbrellatop.jpg",
+	"bkgd": "/img/umbrellatop-bkgd.jpg",
+	"albums": [
+		{
+		}
+		]
+	},
+	"Nick Jake": {
+	"name": "Nick Jake",
+	"pic": "/img/nick-jake.jpg",
+	"bkgd": "/img/nick-jake-bkgd.jpg",
+	"albums": [
+		{
+		}
 		]
 	}
 }
