@@ -1,0 +1,21 @@
+/* CUSTOM CSS -- NOT BOOTSTRAP */
+
+
+
+body {
+	background: url(../img/cemetary.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.cemetary.png', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='cemetary.png', sizingMethod='scale')";
+}
+
+footer {
+	color: white;
+}
+
+	footer p {
+		font-size: 12pt;
+	}
