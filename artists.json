@@ -11,7 +11,7 @@
 		},
 		{
 		"title": "Beat Tape 1",
-		"link": "hhttps://soundcloud.com/bxtr/sets/beat-tape-1",
+		"link": "https://soundcloud.com/bxtr/sets/beat-tape-1",
 		"pic": "/img/BXTR-beat-tape-1"
 		}
 		]
@@ -69,10 +69,10 @@
 		}
 		]
 	},
-	"TRW": {
-	"name": "TRW",
-	"pic": "/img/TRW.jpg",
-	"bkgd": "/img/TRW-bkgd.jpg",
+	"FREE": {
+	"name": "FREE",
+	"pic": "/img/free.jpg",
+	"bkgd": "/img/free-bkgd.jpg",
 	"albums": [
 		{
 		}
@@ -96,12 +96,15 @@
 		}
 		]
 	},
-	"Umbrellatop": {
-	"name": "Umbrellatop",
-	"pic": "/img/umbrellatop.jpg",
+	"Seekers": {
+	"name": "Seekers",
+	"pic": "/img/seekers-umbrellatop.jpg",
 	"bkgd": "/img/umbrellatop-bkgd.jpg",
 	"albums": [
 		{
+			"title": "Umbrellatop",
+			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
+			"pic": "/img/seekers-umbrellatop.jpg"
 		}
 		]
 	},
@@ -111,6 +114,9 @@
 	"bkgd": "/img/nick-jake-bkgd.jpg",
 	"albums": [
 		{
+			"title": "The Molecule Project",
+			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
+			"pic": "/img/nick-jake-the-molecule-project.jpg"
 		}
 		]
 	}

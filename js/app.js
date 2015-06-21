@@ -1,7 +1,7 @@
 var app = angular.module('2fCollective', ['ngRoute', 'ngMessages']);
 
 // Routing
-app.config(function($routeProvider, $locationProvider) {
+app.config(function($routeProvider, $locationProvider, $sceDelegateProvider) {
   	$routeProvider
 		  .when('/', {
 		    templateUrl: 'views/home.html',
@@ -44,6 +44,10 @@ app.config(function($routeProvider, $locationProvider) {
 
 		  // UNCOMMENT TO GET RID OF #'s
 		  // $locationProvider.html5Mode(true); 
+	$sceDelegateProvider.resourceUrlWhitelist([
+	    'self',
+	    'https://www.youtube.com/**'
+	]);
 });
 
 // Controllers

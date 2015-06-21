@@ -16,6 +16,12 @@ footer {
 	color: white;
 }
 
-	footer p {
+footer p {
 		font-size: 12pt;
-	}
+}
+
+.center {
+	margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
