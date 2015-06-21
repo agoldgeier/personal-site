@@ -14,7 +14,7 @@ angular.module('2fCollective')
   		for (var i = 0; i < 4; i++) {
   			$scope.featuredAlbums[featured[i]] = $scope.albums[featured[i]];
   		}
-      console.log($scope.albums);
+      //console.log($scope.albums);
     });
 
 

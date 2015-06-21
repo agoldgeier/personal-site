@@ -11,13 +11,15 @@ app.config(function($routeProvider, $locationProvider, $sceDelegateProvider) {
 		    templateUrl: 'views/artists.html',
 		    controller: 'ArtistsCtrl'
 		  })
-		  .when('/artists/BXTR', {
-		    templateUrl: 'views/artists/bxtr.html',
-		    controller: 'ArtistCtrl'
-		  })
+		  // .when('/artists/BXTR', {
+		  //   templateUrl: 'views/artists/bxtr.html',
+		  //   controller: 'ArtistCtrl'
+		  // })
 		  .when('/artists/:artist', {
-		    templateUrl: 'views/artists.html',
-		    controller: 'ArtistsCtrl'
+		    templateUrl: function(urlattr) {
+		    	return 'views/artists/' + urlattr.artist + '.html';
+		    },
+		    controller: 'ArtistCtrl'
 		  })
 		  .when('/albums', {
 		    templateUrl: 'views/albums.html',

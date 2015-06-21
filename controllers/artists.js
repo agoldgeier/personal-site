@@ -8,7 +8,7 @@ angular.module('2fCollective')
     Page.setTitle('Artists');
 
   	$scope.name = $routeParams.artist; // temporary
-    console.log('Current artist: ' + $scope.name);
+    // console.log('Current artist: ' + $scope.name);
 
   	// $scope.setArtist = function(e) {
   	// 	var name = $(e.target).data('id');
