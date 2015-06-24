@@ -16,7 +16,7 @@ angular.module('2fCollective')
   	// }
 
     $scope.makeArtistLink = function(name) {
-      return "/#/artists/" + name.replace(/ /g,'');
+      return "/#/artists/" + name.toLowerCase().replace(/ /g,'-');
     }
 
   	// THIS IS CALLED AFTER TO UPDATE THE SCOPE

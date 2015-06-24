@@ -1,16 +1,25 @@
 angular.module('2fCollective')
-  .controller('ArtistCtrl', function($scope, Page) {
+  .controller('ArtistCtrl', function($scope, Page, $routeParams, $http) {
 
+    $scope.init = function(name) {
+      $scope.name = name
+    }
+    // $scope.artists = {}
 
-    this.tab = 1;
+    $http.get('artists.json').success(function(data) {
+      $scope.artist = data[$scope.name];
+      console.log($scope.artist)
+    });
+
+    $scope.tab = 1;
 
     $scope.isSet = function(checkTab) {
     	
-        return this.tab === checkTab;
+        return $scope.tab === checkTab;
     };
 
     $scope.setTab = function(activeTab) {
-        this.tab = activeTab;
+        $scope.tab = activeTab;
     };
 
   	// THIS IS CALLED AFTER TO UPDATE THE SCOPE

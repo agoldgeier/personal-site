@@ -11,10 +11,6 @@ app.config(function($routeProvider, $locationProvider, $sceDelegateProvider) {
 		    templateUrl: 'views/artists.html',
 		    controller: 'ArtistsCtrl'
 		  })
-		  // .when('/artists/BXTR', {
-		  //   templateUrl: 'views/artists/bxtr.html',
-		  //   controller: 'ArtistCtrl'
-		  // })
 		  .when('/artists/:artist', {
 		    templateUrl: function(urlattr) {
 		    	return 'views/artists/' + urlattr.artist + '.html';
@@ -22,10 +18,6 @@ app.config(function($routeProvider, $locationProvider, $sceDelegateProvider) {
 		    controller: 'ArtistCtrl'
 		  })
 		  .when('/albums', {
-		    templateUrl: 'views/albums.html',
-		    controller: 'AlbumsCtrl'
-		  })
-		  .when('/albums/:album', {
 		    templateUrl: 'views/albums.html',
 		    controller: 'AlbumsCtrl'
 		  })
@@ -48,11 +40,10 @@ app.config(function($routeProvider, $locationProvider, $sceDelegateProvider) {
 		  // $locationProvider.html5Mode(true); 
 	$sceDelegateProvider.resourceUrlWhitelist([
 	    'self',
-	    'https://www.youtube.com/**'
+	    'https://www.youtube.com/**',
+	    'https://w.soundcloud.com/**'
 	]);
 });
-
-// Controllers
 
 // Directives
 // app.directive("artistTile", function() {
