@@ -53,3 +53,10 @@ app.config(function($routeProvider, $locationProvider, $sceDelegateProvider) {
 // 		templateUrl: "artist-tile.html"
 // 	};
 // });
+
+app.directive("artist", function() {
+	return {
+		restrict: 'E',
+		templateUrl: "views/artists/artist.html"
+	};
+});
