@@ -4,8 +4,8 @@
 	"pic": "/img/BXTR-bio.jpg",
 	"bkgd": "/img/BXTR-bkgd.jpg",
 	"links": {
-		"soundcloud": "",
-		"facebook": "",
+		"soundcloud": "https://soundcloud.com/bxtr",
+		"facebook": "https://www.facebook.com/BXTRofficial",
 		"twitter": "",
 		"youtube": "",
 		"bandcamp": "",
@@ -32,30 +32,27 @@
 	"pic": "/img/henry-ott.jpg",
 	"bkgd": "/img/henry-ott-bkgd.jpg",
 	"links": {
-		"soundcloud": "",
+		"soundcloud": "https://soundcloud.com/henry-ott",
 		"facebook": "https://www.facebook.com/henryottify",
 		"twitter": "",
 		"youtube": "",
 		"bandcamp": "http://henryott.bandcamp.com/",
 		"instagram": "",
-		"main": "soundcloud"
+		"main": "bandcamp"
 		},
 	"albums": [
 		{
 		"title": "Tulpa EP",
-		"embed": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/58820428&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
 		"link": "https://henryott.bandcamp.com/album/tulpa-ep",
 		"pic": "/img/henry-ott-tulpa.jpg"
 		},
 		{
 		"title": "Yantra EP",
-		"embed": "",
 		"link": "https://henryott.bandcamp.com/album/yantra-ep",
 		"pic": "/img/henry-ott-yantra.jpg"
 		},
 		{
 		"title": "Things Moving",
-		"embed": "",
 		"link": "https://henryott.bandcamp.com/album/things-moving",
 		"pic": "/img/henry-ott-things-moving.jpg"
 		}
@@ -67,9 +64,9 @@
 	"pic": "/img/nick-fraser.jpg",
 	"bkgd": "/img/nick-fraser-bkgd.jpg",
 	"links": {
-		"soundcloud": "",
-		"facebook": "",
-		"twitter": "",
+		"soundcloud": "https://soundcloud.com/nickfrasernyc",
+		"facebook": "https://www.facebook.com/nick.fraser.nyc",
+		"twitter": "https://twitter.com/forty_hands",
 		"youtube": "",
 		"bandcamp": "",
 		"instagram": "",
@@ -78,7 +75,7 @@
 	"albums": [
 		{
 		"title": "Error Scheme EP",
-		"embed": "",
+		"embed": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/67478308&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
 		"link": "https://soundcloud.com/nickfrasernyc/sets/error-scheme",
 		"pic": "/img/nick-fraser-error-scheme.jpg"
 		}
@@ -89,7 +86,7 @@
 	"pic": "/img/mike-hickey.jpg",
 	"bkgd": "/img/mike-hickey-bkgd.jpg",
 	"links": {
-		"soundcloud": "",
+		"soundcloud": "https://soundcloud.com/mikehickey",
 		"facebook": "",
 		"twitter": "",
 		"youtube": "",
@@ -107,12 +104,12 @@
 	"pic": "/img/spctra.jpg",
 	"bkgd": "/img/spctra-bkgd.jpg",
 	"links": {
-		"soundcloud": "",
+		"soundcloud": "https://soundcloud.com/spctra",
 		"facebook": "",
 		"twitter": "",
 		"youtube": "",
 		"bandcamp": "",
-		"instagram": "",
+		"instagram": "https://instagram.com/spctrabeats",
 		"main": "soundcloud"
 		},
 	"albums": [
@@ -143,7 +140,7 @@
 	"pic": "/img/sleepy-james.jpg",
 	"bkgd": "/img/sleepy-james-bkgd.jpg",
 	"links": {
-		"soundcloud": "",
+		"soundcloud": "https://soundcloud.com/sleepy-james",
 		"facebook": "",
 		"twitter": "",
 		"youtube": "",
@@ -174,25 +171,25 @@
 		}
 		]
 	},
-	"Seekers": {
-	"name": "Seekers",
-	"pic": "/img/seekers-umbrellatop.jpg",
+	"Umbrellatop": {
+	"name": "Umbrellatop",
+	"pic": "/img/umbrellatop-seekers.jpg",
 	"bkgd": "/img/umbrellatop-bkgd.jpg",
 	"links": {
-		"soundcloud": "",
-		"facebook": "",
+		"soundcloud": "https://soundcloud.com/umbrellatop",
+		"facebook": "https://www.facebook.com/umbrellatop",
 		"twitter": "",
 		"youtube": "",
-		"bandcamp": "",
+		"bandcamp": "https://umbrellatop.bandcamp.com",
 		"instagram": "",
-		"main": "soundcloud"
+		"main": "bandcamp"
 		},
 	"albums": [
 		{
-			"title": "Umbrellatop",
+			"title": "Seekers",
 			"embed": "",
-			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
-			"pic": "/img/seekers-umbrellatop.jpg"
+			"link": "https://umbrellatop.bandcamp.com/album/seekers",
+			"pic": "/img/umbrellatop-seekers.jpg"
 		}
 		]
 	},
@@ -201,7 +198,7 @@
 	"pic": "/img/nick-jake.jpg",
 	"bkgd": "/img/nick-jake-bkgd.jpg",
 	"links": {
-		"soundcloud": "",
+		"soundcloud": "https://soundcloud.com/nick-jake",
 		"facebook": "",
 		"twitter": "",
 		"youtube": "",
@@ -215,6 +212,12 @@
 			"embed": "",
 			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
 			"pic": "/img/nick-jake-the-molecule-project.jpg"
+		},
+		{
+			"title": "Out of Touch",
+			"embed": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/68095841&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
+			"link": "https://soundcloud.com/nick-jake/sets/out-of-touch",
+			"pic": "/img/nick-jake-out-of-touch.jpg"
 		}
 		]
 	}

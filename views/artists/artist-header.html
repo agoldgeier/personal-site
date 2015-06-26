@@ -1,0 +1,10 @@
+<img ng-src="{{artist.pic}}" style="width: 100%">
+<br><br>
+<div id="links">
+	<a ng-show="artist.links['facebook'] != ''" ng-href="{{artist.links['facebook']}}"><img src="img/facebook.png"></a>
+	<a ng-show="artist.links['twitter'] != ''" ng-href="{{artist.links['twitter']}}"><img src="img/twitter.png"></a>
+	<a ng-show="artist.links['instagram'] != ''" ng-href="{{artist.links['instagram']}}"><img src="img/instagram.png"></a>
+	<a ng-show="artist.links['youtube'] != ''" ng-href="{{artist.links['youtube']}}"><img src="img/youtube-2.png"></a>
+	<a ng-show="artist.links['souncloud'] != ''" ng-href="{{artist.links['soundcloud']}}"><img src="img/soundcloud.png"></a>
+	<a ng-show="artist.links['bandcamp'] != ''" ng-href="{{artist.links['bandcamp']}}"><img src="img/bandcamp.png"></a>
+</div>

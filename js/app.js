@@ -60,3 +60,10 @@ app.directive("artist", function() {
 		templateUrl: "views/artists/artist.html"
 	};
 });
+
+app.directive("artistheader", function() {
+	return {
+		restrict: 'E',
+		templateUrl: "views/artists/artist-header.html"
+	};
+});
