@@ -2,13 +2,13 @@ angular.module('2fCollective')
   .controller('ArtistCtrl', function($scope, Page, $routeParams, $http) {
 
     $scope.init = function(name) {
-      $scope.name = name
+      $scope.name = name;
     }
     // $scope.artists = {}
 
     $http.get('artists.json').success(function(data) {
       $scope.artist = data[$scope.name];
-      console.log($scope.artist)
+      console.log($scope.artist);
     });
 
     $scope.tab = 1;

@@ -1,14 +1,28 @@
 <h1 ng-init='init("Henry Ott")'> {{name}} </h1>
 <div class="row">
 	<div class="col-xs-6">
-		<artistheader><artistheader>
+		<artistheader></artistheader>
+		<a href="http://www.bandsintown.com/Henry%20Ott" class="bit-widget-initializer" data-artist="Henry Ott">Henry Ott Tour Dates</a>
 	</div>
 	<div class="col-xs-6">
 		<div class="col-xs-12">
-			<h3>Listen</h3>
-			<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=372141730/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="http://henryott.bandcamp.com/album/tulpa-ep">Tulpa EP by Henry Ott</a></iframe>
-			<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1507157099/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="http://henryott.bandcamp.com/album/yantra-ep">Yantra EP by Henry Ott</a></iframe>
-			<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=4039627369/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="http://henryott.bandcamp.com/album/things-moving">Things Moving by Henry Ott</a></iframe>
+			<ul class="nav nav-pills">
+	    		<li ng-class="{ active:isSet(1) }">
+			    	<a ng-click="setTab(1)">Tulpa EP</a>
+			  	</li>
+				<li ng-class="{ active:isSet(2) }">
+			    	<a ng-click="setTab(2)">Yantra EP</a>
+			    </li>
+			  </ul>
+			<div ng-show="isSet(1)">
+				<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/58820428&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+				LINER NOTES 1
+			</div>
+			<div ng-show="isSet(2)">
+				<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1507157099/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="http://henryott.bandcamp.com/album/yantra-ep">Yantra EP by Henry Ott</a></iframe>
+				LINER NOTES 2
+			</div>
+
 		</div>	
 	</div>
 </div>

@@ -7,9 +7,9 @@
 		"soundcloud": "https://soundcloud.com/bxtr",
 		"facebook": "https://www.facebook.com/BXTRofficial",
 		"twitter": "",
-		"youtube": "",
+		"youtube": "https://www.youtube.com/channel/UCyk8NMwJO4o8clX6NMDcCcA/videos?&ab_channel=JakeBaxter",
 		"bandcamp": "",
-		"instagram": "",
+		"instagram": "https://instagram.com/bxtrstudios/",
 		"main": "soundcloud"
 		},
 	"albums": [
@@ -50,13 +50,7 @@
 		"title": "Yantra EP",
 		"link": "https://henryott.bandcamp.com/album/yantra-ep",
 		"pic": "/img/henry-ott-yantra.jpg"
-		},
-		{
-		"title": "Things Moving",
-		"link": "https://henryott.bandcamp.com/album/things-moving",
-		"pic": "/img/henry-ott-things-moving.jpg"
 		}
-
 		]
 	},
 	"Nick Fraser": {
@@ -66,16 +60,15 @@
 	"links": {
 		"soundcloud": "https://soundcloud.com/nickfrasernyc",
 		"facebook": "https://www.facebook.com/nick.fraser.nyc",
-		"twitter": "https://twitter.com/forty_hands",
+		"twitter": "https://twitter.com/nick_fraser_nyc",
 		"youtube": "",
 		"bandcamp": "",
-		"instagram": "",
+		"instagram": "https://instagram.com/nickfrasernyc/",
 		"main": "soundcloud"
 		},
 	"albums": [
 		{
 		"title": "Error Scheme EP",
-		"embed": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/67478308&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
 		"link": "https://soundcloud.com/nickfrasernyc/sets/error-scheme",
 		"pic": "/img/nick-fraser-error-scheme.jpg"
 		}
@@ -215,9 +208,30 @@
 		},
 		{
 			"title": "Out of Touch",
-			"embed": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/68095841&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
 			"link": "https://soundcloud.com/nick-jake/sets/out-of-touch",
 			"pic": "/img/nick-jake-out-of-touch.jpg"
+		}
+		]
+	},
+	"2F Collective": {
+	"name": "2F Collective",
+	"pic": "/img/nick-jake.jpg",
+	"bkgd": "/img/nick-jake-bkgd.jpg",
+	"links": {
+		"soundcloud": "https://soundcloud.com/2fcollective",
+		"facebook": "https://www.facebook.com/2fcollective",
+		"twitter": "",
+		"youtube": "",
+		"bandcamp": "https://2fcollective.bandcamp.com/",
+		"instagram": "",
+		"main": "soundcloud"
+		},
+	"albums": [
+		{
+			"title": "",
+			"embed": "",
+			"link": "",
+			"pic": ""
 		}
 		]
 	}
