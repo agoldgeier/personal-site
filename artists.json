@@ -1,7 +1,7 @@
 {
 	"BXTR": {
 	"name": "BXTR",
-	"pic": "/img/BXTR-bio.jpg",
+	"pic": "https://i1.sndcdn.com/avatars-000098413394-sewwuc-t200x200.jpg",
 	"bkgd": "/img/BXTR-bkgd.jpg",
 	"links": {
 		"soundcloud": "https://soundcloud.com/bxtr",
@@ -29,7 +29,7 @@
 	},
 	"Henry Ott": {
 	"name": "Henry Ott",
-	"pic": "/img/henry-ott.jpg",
+	"pic": "https://i1.sndcdn.com/avatars-000020781093-k53c1h-t200x200.jpg",
 	"bkgd": "/img/henry-ott-bkgd.jpg",
 	"links": {
 		"soundcloud": "https://soundcloud.com/henry-ott",
@@ -76,7 +76,7 @@
 	},
 	"Mike Hickey": {
 	"name": "Mike Hickey",
-	"pic": "/img/mike-hickey.jpg",
+	"pic": "https://i1.sndcdn.com/avatars-000087488713-fpr7hl-t200x200.jpg",
 	"bkgd": "/img/mike-hickey-bkgd.jpg",
 	"links": {
 		"soundcloud": "https://soundcloud.com/mikehickey",
@@ -130,7 +130,7 @@
 	},
 	"Sleepy James": {
 	"name": "Sleepy James",
-	"pic": "/img/sleepy-james.jpg",
+	"pic": "/img/sleepy-james.png",
 	"bkgd": "/img/sleepy-james-bkgd.jpg",
 	"links": {
 		"soundcloud": "https://soundcloud.com/sleepy-james",

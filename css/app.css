@@ -12,16 +12,27 @@ body {
 	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='cemetary.png', sizingMethod='scale')";
 }
 
+.backDrop {
+	background-color: rgba(255, 255, 255, 0.4);
+	padding: 1em;
+}
+
+/*Artist Style*/
+.artistPic img {
+	min-height: 288px;
+	max-height: 288px;
+}
+
+.center {
+	margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 footer {
 	color: white;
 }
 
 footer p {
-		font-size: 12pt;
-}
-
-.center {
-	margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+	font-size: 12pt;
 }

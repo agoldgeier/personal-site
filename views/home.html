@@ -1,34 +1,36 @@
-<!-- Jumbotron Header -->
-<header class="center">
-    <img id="logo" src="img/logo1.png">
-</header>
+<div class="backDrop">
+  <!-- Jumbotron Header -->
+  <header class="center">
+      <img id="logo" src="img/logo-small.png">
+  </header>
 
 
-<hr>
+  <hr>
 
-<!-- Title -->
-<div class="row">
-    <div class="col-lg-12">
-        <h3>Recent</h3>
-    </div>
+  <!-- Title -->
+  <div class="row">
+      <div class="col-lg-12">
+          <h3>Recent</h3>
+      </div>
+  </div>
+  <!-- /.row -->
+
+  <!-- Page Features -->
+  <div class="row text-center">
+
+      <div class="col-md-3 col-sm-6 hero-feature" ng-repeat="album in featuredAlbums">
+          <div class="thumbnail">
+              <a href="#/artists/{{album.link}}" data-id="{{album.name}}" ng-click="setAlbum($event)">
+                <img ng-src="{{album.pic}}" style="width: 100%">
+                <h4>{{album.name}}</h5>
+                <p>{{album.artist}}</p>
+                <a href="#/artists/{{album.link}}" data-id="{{album.name}}" ng-click="setAlbum($event)"class="btn btn-primary">Listen</a>
+                <br>
+              </a>
+          </div>
+      </div>
+
+
+  </div>
+  <!-- /.row -->
 </div>
-<!-- /.row -->
-
-<!-- Page Features -->
-<div class="row text-center">
-
-    <div class="col-md-3 col-sm-6 hero-feature" ng-repeat="album in featuredAlbums">
-        <div class="thumbnail">
-            <a href="#/artists/{{album.link}}" data-id="{{album.name}}" ng-click="setAlbum($event)">
-              <img ng-src="{{album.pic}}" style="width: 100%">
-              <h4>{{album.name}}</h5>
-              <p>{{album.artist}}</p>
-              <a href="#/artists/{{album.link}}" data-id="{{album.name}}" ng-click="setAlbum($event)"class="btn btn-primary">Listen</a>
-              <br>
-            </a>
-        </div>
-    </div>
-
-
-</div>
-<!-- /.row
