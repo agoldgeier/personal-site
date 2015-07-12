@@ -19,8 +19,8 @@ body {
 
 /*Artist Style*/
 .artistPic img {
-	min-height: 288px;
-	max-height: 288px;
+	min-height: 360px;
+	max-height: 360px;
 }
 
 .center {
