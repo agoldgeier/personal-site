@@ -110,16 +110,16 @@
 		}
 		]
 	},
-	"FREE": {
-	"name": "FREE",
+	"Tyriek FREE": {
+	"name": "Tyriek FREE",
 	"pic": "/img/free.jpg",
 	"bkgd": "/img/free-bkgd.jpg",
 	"links": {
-		"soundcloud": "",
+		"soundcloud": "https://soundcloud.com/trw",
 		"facebook": "",
-		"twitter": "",
+		"twitter": "https://twitter.com/heainttrue",
 		"youtube": "",
-		"bandcamp": "",
+		"bandcamp": "http://iceteamix.bandcamp.com/",
 		"instagram": "",
 		"main": "soundcloud"
 		},

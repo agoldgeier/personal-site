@@ -1,2 +1,26 @@
 <h1 ng-init='init("Umbrellatop")'> {{name}} </h1>
-<artist></artist>
+<div class="row">
+	<div class="col-xs-6">
+		<artistheader></artistheader>
+	</div>
+	<div class="col-xs-6">
+		<div class="col-xs-12">
+			<ul class="nav nav-pills">
+	    		<li ng-class="{ active:isSet(1) }">
+			    	<a ng-click="setTab(1)">The River Looks Beautiful</a>
+			  	</li>
+				<li ng-class="{ active:isSet(2) }">
+			    	<a ng-click="setTab(2)">Other Songs</a>
+			    </li>
+			  </ul>
+			<div ng-show="isSet(1)">
+				FIND SEEKERS EMBED LINK
+				LINER NOTES 1
+			</div>
+			<div ng-show="isSet(2)">
+				<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/124549217%3Fsecret_token%3Ds-Ftj0s&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+				LINER NOTES 2
+			</div>
+		</div>	
+	</div>
+</div>
