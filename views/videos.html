@@ -1,6 +1,6 @@
 <h2>Videos</h2>
 
-<div ng-repeat="video in videos" class="center">
+<div ng-repeat="video in videosInOrder" class="center">
    <iframe width="640" height="390" ng-src="{{getIframeSrc(video.link)}}" frameborder="0" allowfullscreen></iframe>
    <br>
 </div>

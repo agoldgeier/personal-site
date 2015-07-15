@@ -6,9 +6,7 @@ angular.module('2fCollective')
   	$http.get('albums.json').success(function(data) {
     	$scope.albums = data;
 
-        var featured = ["The River Looks Beautiful", 
-  		"The River Looks Beautiful1", "The River Looks Beautiful2", 
-  		"The River Looks Beautiful3"];
+      var featured = ["7", "6", "5", "4"];
 
   		$scope.featuredAlbums = {};
   		for (var i = 0; i < 4; i++) {

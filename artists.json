@@ -146,10 +146,10 @@
 		}
 		]
 	},
-	"Moon Tan": {
-	"name": "Moon Tan",
-	"pic": "/img/moon-tan.jpg",
-	"bkgd": "/img/moon-tan-bkgd.jpg",
+	"Moon Tann": {
+	"name": "Moon Tann",
+	"pic": "/img/moon-tann.jpg",
+	"bkgd": "/img/moon-tann-bkgd.jpg",
 	"links": {
 		"soundcloud": "",
 		"facebook": "",
@@ -186,8 +186,8 @@
 		}
 		]
 	},
-	"Nick Jake": {
-	"name": "Nick Jake",
+	"nick jake": {
+	"name": "nick jake",
 	"pic": "/img/nick-jake.jpg",
 	"bkgd": "/img/nick-jake-bkgd.jpg",
 	"links": {
@@ -203,7 +203,7 @@
 		{
 			"title": "The Molecule Project",
 			"embed": "",
-			"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
+			"link": "https://soundcloud.com/nick-jake/sets/the-molecule-project",
 			"pic": "/img/nick-jake-the-molecule-project.jpg"
 		},
 		{
