@@ -60,13 +60,21 @@ body {
    right:50%;
 }
 
-.author {
+/*.author {
 	color: #000;
 }
 
 	.author:hover {
 		color: #555;
-	}
+	}*/
+
+a {
+  color: #000;
+}
+
+  a:hover {
+    color: #555;
+  }
 
 footer {
 	color: white;
