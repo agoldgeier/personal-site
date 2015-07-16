@@ -8,8 +8,8 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.cemetary.png', sizingMethod='scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='cemetary.png', sizingMethod='scale')";
+  /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.cemetary.png', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='cemetary.png', sizingMethod='scale')";*/
 }
 
 .backDrop {
@@ -44,6 +44,10 @@ a {
   a:hover {
     color: #555;
   }
+
+.nav li .active {
+	background-color: #000;
+}
 
 footer {
 	color: white;
