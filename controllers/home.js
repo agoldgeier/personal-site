@@ -15,6 +15,10 @@ angular.module('2fCollective')
       //console.log($scope.albums);
     });
 
+    $scope.makeArtistLink = function(name) {
+      return "/#/artists/" + name.toLowerCase().replace(/ /g,'-');
+    }
+
 
 
  

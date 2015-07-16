@@ -4,7 +4,7 @@ angular.module('2fCollective')
   	$http.get('albums.json').success(function(data) {
       $scope.albums = data;
 
-      var list = ["7", "6", "5", "4", "3", "2"];
+      var list = ["7", "6", "5", "4", "3", "2", "1"];
 
       $scope.albumsInOrder = [];
       for (var i = 0; i < 7; i++) {

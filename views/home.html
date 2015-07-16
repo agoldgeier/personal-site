@@ -19,7 +19,7 @@
 
     <div class="col-md-3 col-sm-6 hero-feature" ng-repeat="album in featuredAlbums">
         <div class="thumbnail">
-            <a href="#/artists/{{album.link}}" data-id="{{album.name}}" ng-click="setAlbum($event)">
+            <a ng-href="{{makeArtistLink(album.link)}}" data-id="{{album.name}}" ng-click="setAlbum($event)">
               <img ng-src="{{album.pic}}" style="width: 100%">
               <h4>{{album.name}}</h5>
               <p>{{album.artist}}</p>
