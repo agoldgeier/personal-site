@@ -1,6 +1,6 @@
 angular.module('2fCollective')
 	.factory('Page', function(){
-	  var title = 'default';
+	  var title = '';
 	  const defaultBackground = "../img/cemetary.png";
 	  var background = defaultBackground;
 	  return {

@@ -32,6 +32,7 @@ body {
 .navbar-brand {
 	font-size: 14px;
 	margin-right: -4em;
+	padding-left: 3em;
 }
 
 .navbar-nav {
@@ -60,8 +61,18 @@ a {
     color: #555;
   }
 
-.nav li .active {
-	background-color: #000;
+.nav-pills li.active a {
+	color: #FFF;
+	background-color: #333;
+}
+
+	.nav-pills li.active a:hover {
+		/*color: #FFF;*/
+		background-color: #333;
+	}
+
+.nav-pills li a:hover {
+	cursor: pointer;
 }
 
 footer {
