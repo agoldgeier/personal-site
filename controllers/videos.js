@@ -6,10 +6,10 @@ angular.module('2fCollective')
   	$http.get('videos.json').success(function(data) {
       $scope.videos = data;
 
-      var list = ["6", "5", "4", "3", "2", "1"];
+      var list = ["5", "4", "3", "2", "1"];
 
       $scope.videosInOrder = [];
-      for (var i = 0; i < 6; i++) {
+      for (var i = 0; i < 5; i++) {
         $scope.videosInOrder[i] = $scope.videos[list[i]];
       }
     });
