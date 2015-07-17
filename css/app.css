@@ -31,7 +31,22 @@ body {
 
 .navbar-brand {
 	font-size: 14px;
+	margin-right: -4em;
 }
+
+.navbar-nav {
+	width: 100%;
+	text-align: center;
+	float: none;
+}
+
+	.navbar-nav ul {
+	}
+
+	.navbar-nav li {
+		float: none;
+		display: inline-block;
+	}
 
 .contactsCol {
   text-align: center;
