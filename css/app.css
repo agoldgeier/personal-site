@@ -57,9 +57,9 @@ a {
   color: #000;
 }
 
-  a:hover {
-    color: #555;
-  }
+a:hover {
+color: #555;
+}
 
 .nav-pills li.active a {
 	color: #FFF;
@@ -71,9 +71,9 @@ a {
 		background-color: #333;
 	}
 
-.nav-pills li a:hover {
-	cursor: pointer;
-}
+	.nav-pills li a:hover {
+		cursor: pointer;
+	}
 
 footer {
 	color: white;

@@ -4,7 +4,6 @@ angular.module('2fCollective')
     $scope.init = function(name) {
       $scope.name = name;
     }
-    // $scope.artists = {}
 
     $http.get('artists.json').success(function(data) {
       $scope.artist = data[$scope.name];
