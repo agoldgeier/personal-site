@@ -3,14 +3,12 @@ angular.module('2fCollective')
 
   	Page.setTitle('Home');
 
-  	$http.get('albums.json').success(function(data) {
-    	$scope.albums = data;
+  	$http.get('featured.json').success(function(data) {
+    	$scope.featured = data;
 
-      var featured = ["7", "6", "5", "4"];
-
-  		$scope.featuredAlbums = {};
+  		$scope.featuredInOrder = [];
   		for (var i = 0; i < 4; i++) {
-  			$scope.featuredAlbums[featured[i]] = $scope.albums[featured[i]];
+  			$scope.featuredInOrder[i] = $scope.featured[i.toString()];
   		}
       //console.log($scope.albums);
     });

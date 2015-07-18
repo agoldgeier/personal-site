@@ -1,0 +1,26 @@
+{
+	"0": {
+		"title": "Gravitational Flow",
+		"subtitle": "Henry Ott",
+		"link": "#/videos",
+		"pic": "img/home-ott-video.png"
+	},
+	"1": {
+		"title": "Departure",
+		"subtitle": "BXTR",
+		"link": "#/artists/bxtr",
+		"pic": "img/home-bxtr-single.jpg"
+	},
+	"2": {
+		"title": "alittlelikeraininthemountains",
+		"subtitle": "Sleepy James",
+		"link": "#/artists/sleepy-james",
+		"pic": "img/home-sleepy-single.jpg"
+	},
+	"3": {
+		"title": "In the Dreamtime",
+		"subtitle": "Moon Tann",
+		"link": "#/artists/moon-tann",
+		"pic": "img/home-moon-single.jpg"
+	}
+}
