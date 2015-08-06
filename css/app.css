@@ -17,6 +17,18 @@ body {
 	padding: 1em;
 }
 
+#logo {
+	width: 40%;
+	height: auto;
+}
+
+@media (max-width: 767px) {
+	#logo {
+		width: 100%;
+		height: auto;
+	}
+}
+
 /*Artist Style*/
 .artistPic img {
 	min-height: 360px;
