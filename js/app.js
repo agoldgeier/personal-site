@@ -21,6 +21,12 @@ app.config(function($routeProvider, $locationProvider, $sceDelegateProvider) {
 		    templateUrl: 'views/albums.html',
 		    controller: 'AlbumsCtrl'
 		  })
+		  .when('/albums/:album', {
+		    templateUrl: function(urlattr) {
+		    	return 'views/albums/' + urlattr.album + '.html';
+		    },
+		    controller: 'AlbumCtrl'
+		  })
 		  .when('/videos', {
 		    templateUrl: 'views/videos.html',
 		    controller: 'VideosCtrl'
@@ -67,3 +73,11 @@ app.directive("artistheader", function() {
 		templateUrl: "views/artists/artist-header.html"
 	};
 });
+
+app.directive("album", function() {
+	return {
+		restrict: 'E',
+		templateUrl: "views/albums/album.html"
+	};
+});
+

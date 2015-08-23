@@ -15,7 +15,7 @@ angular.module('2fCollective')
   	// 	console.log(name);
   	// }
 
-    $scope.makeArtistLink = function(name) {
+    $scope.makeLink = function(name) {
       return "/#/artists/" + name.toLowerCase().replace(/ /g,'-');
     }
 

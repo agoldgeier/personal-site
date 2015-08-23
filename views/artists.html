@@ -1,7 +1,7 @@
 <h2>Artists</h2>
 <div class="row">
   <div class="col-md-4 artistPic" ng-repeat="artist in artists">
-    <a ng-href="{{makeArtistLink(artist.name)}}" data-id="{{name}}" ng-click="setArtist($event)">
+    <a ng-href="{{makeLink(artist.name)}}" data-id="{{name}}" ng-click="setArtist($event)">
       <img ng-src="{{artist.pic}}" style="width: 100%">
       <h4 class="author">{{artist.name}}</h4>
       <br>

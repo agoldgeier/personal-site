@@ -14,13 +14,13 @@
 		},
 	"albums": [
 		{
-		"title": "The River Looks Beautiful",
+		"name": "The River Looks Beautiful",
 		"embed": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/12917488&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
 		"link": "https://soundcloud.com/bxtr/sets/the-river-looks-beautiful",
 		"pic": "/img/BXTR-the-river-looks-beautiful"
 		},
 		{
-		"title": "Beat Tape 1",
+		"name": "Beat Tape 1",
 		"embed": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/32445337&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
 		"link": "https://soundcloud.com/bxtr/sets/beat-tape-1",
 		"pic": "/img/BXTR-beat-tape-1"
@@ -42,12 +42,12 @@
 		},
 	"albums": [
 		{
-		"title": "Tulpa EP",
+		"name": "Tulpa EP",
 		"link": "https://henryott.bandcamp.com/album/tulpa-ep",
 		"pic": "/img/henry-ott-tulpa.jpg"
 		},
 		{
-		"title": "Yantra EP",
+		"name": "Yantra EP",
 		"link": "https://henryott.bandcamp.com/album/yantra-ep",
 		"pic": "/img/henry-ott-yantra.jpg"
 		}
@@ -68,7 +68,7 @@
 		},
 	"albums": [
 		{
-		"title": "Error Scheme EP",
+		"name": "Error Scheme EP",
 		"link": "https://soundcloud.com/nickfrasernyc/sets/error-scheme",
 		"pic": "/img/nick-fraser-error-scheme.jpg"
 		}
@@ -179,7 +179,7 @@
 		},
 	"albums": [
 		{
-			"title": "Seekers",
+			"name": "Seekers",
 			"embed": "",
 			"link": "https://umbrellatop.bandcamp.com/album/seekers",
 			"pic": "/img/umbrellatop-seekers.jpg"
@@ -201,13 +201,13 @@
 		},
 	"albums": [
 		{
-			"title": "The Molecule Project",
+			"name": "The Molecule Project",
 			"embed": "",
 			"link": "https://soundcloud.com/nick-jake/sets/the-molecule-project",
 			"pic": "/img/nick-jake-the-molecule-project.jpg"
 		},
 		{
-			"title": "Out of Touch",
+			"name": "Out of Touch",
 			"link": "https://soundcloud.com/nick-jake/sets/out-of-touch",
 			"pic": "/img/nick-jake-out-of-touch.jpg"
 		}
@@ -228,7 +228,7 @@
 		},
 	"albums": [
 		{
-			"title": "",
+			"name": "",
 			"embed": "",
 			"link": "",
 			"pic": ""

@@ -1,66 +1,77 @@
 {
-	"8": {
+	"Error Scheme EP": {
 		"name": "Error Scheme EP",
 		"pic": "/img/nick-fraser-error-scheme.jpg",
 		"artist": "Nick Fraser",
 		"link": "Nick Fraser",
 		"pill": "1",
-		"catalog": "008"
+		"catalog": "008",
+		"ordinal": 8,
+		"embed": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/67478308&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
+		"download": "GET-THIS-LINK",
+		"notes": "These are notes."
 	},
-	"7": {
+	"Out of Touch": {
 		"name": "Out of Touch",
 		"pic": "/img/nick-jake-out-of-touch.jpg",
 		"artist": "nick jake",
 		"link": "nick jake",
 		"pill": "1",
-		"catalog": "007"
+		"catalog": "007",
+		"ordinal": 7
 	},
-	"6": {
+	"Tulpa EP": {
 		"name": "Tulpa EP",
 		"pic": "/img/henry-ott-tulpa.jpg",
 		"artist": "Henry Ott",
 		"link": "Henry Ott",
 		"pill": "1",
-		"catalog": "006"
+		"catalog": "006",
+		"ordinal": 6
 	},
-	"5": {
+	"The Molecule Project": {
 		"name": "The Molecule Project",
 		"pic": "/img/nick-jake-the-molecule-project.jpg",
 		"artist": "nick jake",
 		"link": "nick jake",
 		"pill": "2",
-		"catalog": "005"
+		"catalog": "005",
+		"ordinal": 5
 	},
-	"4": {
+	"The River Looks Beautiful": {
 		"name": "The River Looks Beautiful",
 		"pic": "/img/BXTR-the-river-looks-beautiful.jpg",
 		"artist": "BXTR",
 		"link": "BXTR",
 		"pill": "1",
-		"catalog": "004"
+		"catalog": "004",
+		"ordinal": 4
 	},
-	"3": {
+	"Seekers": {
 		"name": "Seekers",
 		"pic": "/img/umbrellatop-seekers.jpg",
 		"artist": "Umbrellatop",
 		"link": "Umbrellatop",
 		"pill": "1",
-		"catalog": "003"
+		"catalog": "003",
+		"ordinal": 3
 	},
-	"2": {
+	"Wedding": {
 		"name": "Wedding",
 		"pic": "/img/2f-wedding.jpg",
 		"artist": "2F Collective",
 		"link": "2F Collective",
 		"pill": "1",
-		"catalog": "002"
+		"catalog": "002",
+		"ordinal": 2
 	},
-	"1": {
+	"Yantra EP": {
 		"name": "Yantra EP",
 		"pic": "/img/henry-ott-yantra.jpg",
 		"artist": "Henry Ott",
 		"link": "Henry Ott",
 		"pill": "2",
-		"catalog": "001"
+		"catalog": "001",
+		"ordinal": 1
 	}
 }
