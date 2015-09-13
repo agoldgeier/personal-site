@@ -41,6 +41,11 @@ body {
   text-align: center;
 }
 
+.download-button {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
 /*.navbar-brand {
 	font-size: 14px;
 	margin-right: -4em;

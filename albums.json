@@ -7,7 +7,7 @@
 		"pill": "1",
 		"catalog": "008",
 		"ordinal": 8,
-		"embed": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/67478308&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
+		"embed": "67478308",
 		"download": "GET-THIS-LINK",
 		"notes": "These are notes."
 	},
@@ -18,7 +18,10 @@
 		"link": "nick jake",
 		"pill": "1",
 		"catalog": "007",
-		"ordinal": 7
+		"ordinal": 7,
+		"embed": "68095841",
+		"download": "GET-THIS-LINK",
+		"notes": "These are notes."
 	},
 	"Tulpa EP": {
 		"name": "Tulpa EP",
@@ -27,7 +30,10 @@
 		"link": "Henry Ott",
 		"pill": "1",
 		"catalog": "006",
-		"ordinal": 6
+		"ordinal": 6,
+		"embed": "58820428",
+		"download": "https://2fcollective.bandcamp.com/album/tulpa-ep",
+		"notes": "all songs written, recorded and mastered by Henry Ott<br>all songs mixed by Jake Baxter<br>artwork by Morgan Sitzler<br>released 25 October 2014<br>"
 	},
 	"The Molecule Project": {
 		"name": "The Molecule Project",
@@ -36,7 +42,10 @@
 		"link": "nick jake",
 		"pill": "2",
 		"catalog": "005",
-		"ordinal": 5
+		"ordinal": 5,
+		"embed": "124754180",
+		"download": "https://2fcollective.bandcamp.com/album/the-molecule-project",
+		"notes": "All songs written, recorded and mastered by Henry Ott<br>All songs mixed by Jake Baxter<br>Artwork by Morgan Sitzler<br>released 25 October 2014<br>"
 	},
 	"The River Looks Beautiful": {
 		"name": "The River Looks Beautiful",
@@ -45,7 +54,10 @@
 		"link": "BXTR",
 		"pill": "1",
 		"catalog": "004",
-		"ordinal": 4
+		"ordinal": 4,
+		"embed": "12917488",
+		"download": "https://2fcollective.bandcamp.com/album/the-river-looks-beautiful",
+		"notes": "These are notes."
 	},
 	"Seekers": {
 		"name": "Seekers",
@@ -54,7 +66,10 @@
 		"link": "Umbrellatop",
 		"pill": "1",
 		"catalog": "003",
-		"ordinal": 3
+		"ordinal": 3,
+		"embed": "124548321",
+		"download": "https://2fcollective.bandcamp.com/album/seekers",
+		"notes": "music by Ian Arnold<br>album art by <a href=\"http://www.robertrichburg.com\">Robert Richburg</a><br> mastered by Jake Baxter<br>released 30 September 2013"
 	},
 	"Wedding": {
 		"name": "Wedding",
@@ -63,7 +78,10 @@
 		"link": "2F Collective",
 		"pill": "1",
 		"catalog": "002",
-		"ordinal": 2
+		"ordinal": 2,
+		"embed": "7890526",
+		"download": "https://2fcollective.bandcamp.com/album/wedding",
+		"notes": "all music is written and recorded by the 2F collective:<br>Jake Baxter<br>Nick Fraser<br>Henry Ott<br>Mike Hickey<br>Francesca Loeber<br>*Steve Conroy bass on Modified Dutch Method Album<br>artwork by Morgan Sitzler<br>released 16 July 2013"
 	},
 	"Yantra EP": {
 		"name": "Yantra EP",
@@ -72,6 +90,9 @@
 		"link": "Henry Ott",
 		"pill": "2",
 		"catalog": "001",
-		"ordinal": 1
+		"ordinal": 1,
+		"embed": "125954104",
+		"download": "https://2fcollective.bandcamp.com/album/yantra-ep",
+		"notes": "all songs written and recorded by Henry Ott<br>artwork by Morgan Sitzler<br>released 17 May 2013"
 	}
 }

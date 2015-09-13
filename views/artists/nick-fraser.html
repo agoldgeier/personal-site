@@ -10,12 +10,12 @@
 			<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/124505420%3Fsecret_token%3Ds-5FDda&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 		</div>	
 	</div>
-	<h3>Releases</h3>
-	<div class="col-md-3 artistPic" ng-repeat="album in albums">
-    <a ng-href="{{makeLink(album.name)}}" data-id="{{name}}" ng-click="setArtist($event)">
-      <img ng-src="{{album.pic}}" style="width: 100%">
-      <h4 class="author">{{album.name}}</h4>
-      <br>
-    </a>
-  </div>
+</div>
+<h3>Releases</h3>
+<div class="col-md-3 artistPic" ng-repeat="album in artist.albums">
+	<a ng-href="{{makeLink(album.name)}}" data-id="{{name}}" ng-click="setArtist($event)">
+	  <img ng-src="{{album.pic}}" >
+	  <h4 class="author">{{album.name}}</h4>
+	  <br>
+	</a>
 </div>
