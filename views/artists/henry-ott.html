@@ -7,30 +7,19 @@
 	</div>
 	<div class="col-md-6">
 		<div class="col-xs-12">
-			<ul class="nav nav-pills">
-	    		<li ng-class="{ active:isSet(1) }">
-			    	<a ng-click="setTab(1)">Tulpa EP</a>
-			  	</li>
-				<li ng-class="{ active:isSet(2) }">
-			    	<a ng-click="setTab(2)">Yantra EP</a>
-			    </li>
-			</ul>
-			<div ng-show="isSet(1)">
-				<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/58820428&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-				<a href="https://2fcollective.bandcamp.com/album/tulpa-ep" class="btn btn-primary btn-default">Download</a><br>
-				all songs written, recorded and mastered by Henry Ott<br>
-				all songs mixed by Jake Baxter<br>
-				artwork by Morgan Sitzler<br>
-				released 25 October 2014<br>
-			</div>
-			<div ng-show="isSet(2)">
-				<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/125954104&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-				<a href="https://2fcollective.bandcamp.com/album/yantra-ep" class="btn btn-primary btn-default">Download</a><br>
-				all songs written and recorded by Henry Ott<br>
-				artwork by Morgan Sitzler<br>
-				released 17 May 2013
-			</div>
 
 		</div>	
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<h3>Releases</h3>
+		<div class="col-md-6 artistPic" ng-repeat="album in artist.albums"> <!-- style="padding: 0;" to put albums in line with h3 -->
+			<a ng-href="{{makeLink(album.name)}}" data-id="{{name}}" ng-click="setArtist($event)">
+			  <img ng-src="{{album.pic}}" >
+			  <h4 class="author">{{album.name}}</h4>
+			  <br>
+			</a>
+		</div>
 	</div>
 </div>

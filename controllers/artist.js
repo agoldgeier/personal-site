@@ -21,6 +21,10 @@ angular.module('2fCollective')
         $scope.tab = activeTab;
     };
 
+    $scope.makeLink = function(name) {
+      return "/#/albums/" + name.toLowerCase().replace(/ /g,'-');
+    }
+
   	// THIS IS CALLED AFTER TO UPDATE THE SCOPE
     function updateInfo() {
       $scope.$apply();
