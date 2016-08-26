@@ -10,6 +10,8 @@ body {
   /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.cemetary.png', sizingMethod='scale');
 	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='cemetary.png', sizingMethod='scale')";*/
 	color: #555;
+	min-width: 850px;
+
 }
 
 @media (max-width: 767px) {
@@ -45,6 +47,7 @@ body {
 }
 
 .my-navbar {
+	min-width: 850px;
 	background-color: #FFF;
 	border-bottom-style: solid;
 	border-width: 1px;
