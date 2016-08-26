@@ -1,8 +1,0 @@
-<h2>Videos</h2>
-
-<div ng-repeat="(i, video) in videosInOrder" class="center">
-	<div class="embed-responsive embed-responsive-16by9">
-		<iframe ng-id="{{i}}" width="640" height="390" ng-src="{{getIframeSrc(video.link)}}" frameborder="0" allowfullscreen></iframe>
-  	<br>
-	</div>
-</div>

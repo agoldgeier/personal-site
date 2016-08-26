@@ -3,18 +3,13 @@
 
 
 body {
-	background: url(../img/cemetary.png) no-repeat center center fixed;
-	-webkit-background-size: cover;
+  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.cemetary.png', sizingMethod='scale');
 	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='cemetary.png', sizingMethod='scale')";*/
-}
-
-.backDrop {
-	background-color: rgba(255, 255, 255, 0.5);
-	padding: 1em;
+	color: #555;
 }
 
 #logo {
@@ -36,7 +31,7 @@ body {
 }
 
 .center {
-	margin-left: auto;
+  margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
@@ -52,10 +47,44 @@ body {
 	padding-left: 3em;
 }*/
 
+/*.big-ol-container {
+    width: 75%;
+    margin: auto;
+    min-width: 875px;
+    max-width: 1000px;
+}*/
+
+/* index */
+
+.titles {
+	position: absolute;
+	bottom: 0;
+	left: 100px;
+}
+
+.my-navbar {
+	background-color: #FFF;
+	border-bottom-style: solid;
+	border-width: 1px;
+	border-color: #DDD;
+	padding-top: 100px;
+/*	padding-bottom: 100px;
+*/}
+
+.socialbutton {
+	height: 24px;
+}
+
+.socialbutton:hover {
+	opacity: 0.5;
+}
+
 .navbar-nav {
-	width: 100%;
-	text-align: center;
-	float: none;
+	/*width: 100%;*/
+	text-align: right;
+	position: absolute;
+	bottom: 0;
+	right: 100px;
 }
 
 	.navbar-nav ul {
@@ -75,17 +104,18 @@ a {
 }
 
 a:hover {
-color: #555;
+  color: #555;
+  text-decoration: none;
 }
 
 .nav-pills li.active a {
-	color: #FFF;
-	background-color: #333;
+	color: #222;
+	background-color: #EEE;
 }
 
 	.nav-pills li.active a:hover {
 		/*color: #FFF;*/
-		background-color: #333;
+		background-color: #EEE;
 	}
 
 	.nav-pills li a:hover {
@@ -93,13 +123,115 @@ color: #555;
 	}
 
 footer {
-	color: white;
+	color: #000;
 }
 
 footer p {
-	font-size: 12pt;
+	font-size: 8pt;
 }
 
 h2 {
-	text-align: center;
+	font-size: 16pt;
+	font-weight: 200;
+}
+
+/* home */
+#biopic {
+	/*width: 40%;*/
+	/*max-width: 350px;*/
+	padding: 50px;
+	display: inline-block;
+}
+
+#bio-text {
+	padding: 50px;
+    padding-left: 0px;
+    padding-right: 100px;
+    /*float: right;*/
+    /*width: 60%;*/
+    font-size: 14px;
+    line-height: 150%;
+    margin-top: 0px;
+    display: inline-block;
+}
+
+/* projects */
+.project-pic {
+	padding: 10px;
+}
+
+.pic-mask {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	color: #FFF;
+}
+
+  .pic-mask:hover {
+  	opacity: 1;
+  }
+
+.mask-text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.project-title {
+	font-size: 20pt;
+}
+.project-subtitle {
+	font-size: 12pt;
+}
+
+.project-button-box {
+	margin-top: 5px;
+	width: 100%;
+}
+.coming-soon {
+	width: auto;
+	margin: 0 auto;
+    min-width: 0;
+    display: table;	
+    border-color: #FFF;
+	border-radius: 5px;
+	border: 1px solid;
+	background-color: rgba(255, 255, 255, 0);
+}
+
+.coming-soon:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* cv */
+#pdf {
+  position: relative;
+  width: 75%;
+  margin: 0 auto;
+}
+
+#cv {
+  position: relative;
+  width: 100%;
+}
+
+/* music */
+#biosampler {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#musicbio {
+	margin-top: 50px;
+	margin-bottom: 25px;
+}
+
+#artist-links {
+	margin-bottom: 100px;
 }

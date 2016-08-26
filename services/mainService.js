@@ -1,4 +1,4 @@
-angular.module('2fCollective')
+angular.module('PersonalSite')
 	.factory('Page', function(){
 	  var title = '';
 	  const defaultBackground = "../img/cemetary.png";

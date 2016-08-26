@@ -1,4 +1,4 @@
-angular.module('2fCollective')
+angular.module('PersonalSite')
 	.controller('MainCtrl', function($scope, Page) {
 
   	$scope.Page = Page;

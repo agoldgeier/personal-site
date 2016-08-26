@@ -1,33 +1,21 @@
 <!-- Jumbotron Header -->
-<header class="center">
-    <img id="logo" src="img/logo-small.png">
-</header>
-
-
-<hr>
-
-<!-- Title -->
 <div class="row">
-    <div class="col-lg-12">
-        <h3>Recent</h3>
-    </div>
+  <img id="biopic" src="img/biopic.png" class="col-md-6">
+
+  <div id="bio-text" class="col-md-6">
+<p>Hello.<p>
+
+<p>My name is Aviv. I am a musician and music technologist based out of New York City. I received my Bachelor’s in Music Technology from NYU in May 2016 with an honors minor in Computer Science. While there, I spent the last couple years engaged in research involving Digital Signal Processing, Machine Learning, and Music Information Retrieval.<br>
+<a href="#/projects">Read about my projects here >>></a><br>
+<a href="#/cv">Take a look at my r&eacute;sum&eacute; here >>></a></p>
+
+<p>Aside from techy things, I am a pianist and songwriter. I have performed chamber music in palaces, jazz in yacht clubs, reggae in forests, and experimental polyrhythmic R&amp;B on Brooklyn rooftops.<br>
+<a href="#/music">Listen to my music here >>></a></p>
+
+<p>Contact me at <a href="mailto:aviv.goldgeier@gmail.com" target="_top">aviv.goldgeier@gmail.com</a> to offer me a job, ask me out, or otherwise boost my confidence.</p>
+
+  <div>
 </div>
-<!-- /.row -->
-
-<!-- Page Features -->
-<div class="row text-center">
-
-    <div class="col-md-3 col-sm-6 hero-feature" ng-repeat="feature in featuredInOrder">
-        <div class="thumbnail">
-            <a ng-href="{{feature.link}}" data-id="{{feature.title}}" ng-click="setAlbum($event)">
-              <img ng-src="{{feature.pic}}" style="width: 100%">
-              <h4>{{feature.title}}</h5>
-              <p>{{feature.subtitle}}</p>
-              <img src="img/play.png" style="width: 20%;">
-              <br>
-            </a>
-        </div>
-    </div>
 
 
 </div>

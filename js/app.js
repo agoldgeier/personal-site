@@ -1,4 +1,4 @@
-var app = angular.module('2fCollective', ['ngRoute', 'ngMessages']);
+var app = angular.module('PersonalSite', ['ngRoute', 'ngMessages']);
 
 // Routing
 app.config(function($routeProvider, $locationProvider, $sceDelegateProvider) {
@@ -7,37 +7,23 @@ app.config(function($routeProvider, $locationProvider, $sceDelegateProvider) {
 		    templateUrl: 'views/home.html',
 		    controller: 'HomeCtrl'
 		  })
-		  .when('/artists', {
-		    templateUrl: 'views/artists.html',
-		    controller: 'ArtistsCtrl'
+		  .when('/projects', {
+		    templateUrl: 'views/projects.html',
+		    controller: 'ProjectsCtrl'
 		  })
-		  .when('/artists/:artist', {
+		  .when('/projects/:project', {
 		    templateUrl: function(urlattr) {
-		    	return 'views/artists/' + urlattr.artist + '.html';
+		    	return 'views/projects/' + urlattr.project + '.html';
 		    },
-		    controller: 'ArtistCtrl'
+		    controller: 'ProjectCtrl'
 		  })
-		  .when('/albums', {
-		    templateUrl: 'views/albums.html',
-		    controller: 'AlbumsCtrl'
+		  .when('/cv', {
+		    templateUrl: 'views/cv.html',
+		    controller: 'CVCtrl'
 		  })
-		  .when('/albums/:album', {
-		    templateUrl: function(urlattr) {
-		    	return 'views/albums/' + urlattr.album + '.html';
-		    },
-		    controller: 'AlbumCtrl'
-		  })
-		  .when('/videos', {
-		    templateUrl: 'views/videos.html',
-		    controller: 'VideosCtrl'
-		  })
-		  .when('/contacts', {
-		    templateUrl: 'views/contacts.html',
-		    controller: 'ContactsCtrl'
-		  })
-		  .when('/blog', {
-		    templateUrl: 'views/blog.html',
-		    controller: 'BlogCtrl'
+		  .when('/music', {
+		    templateUrl: 'views/music.html',
+		    controller: 'MusicCtrl'
 		  })
 		  .otherwise('/');
 
@@ -59,6 +45,13 @@ app.config(function($routeProvider, $locationProvider, $sceDelegateProvider) {
 // 		templateUrl: "artist-tile.html"
 // 	};
 // });
+
+app.directive("project", function() {
+	return {
+		restrict: 'E',
+		templateUrl: "views/projects/project.html"
+	};
+});
 
 app.directive("artist", function() {
 	return {
