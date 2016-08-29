@@ -19,21 +19,8 @@ body {
 	}
 }
 
-/*Artist Style*/
-.artistPic img {
-	min-height: 360px;
-	max-height: 360px;
-}
-
-.center {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.download-button {
-	font-weight: bold;
-	text-decoration: underline;
+.navbar-toggle{
+	background-color: #000;
 }
 
 /* index */
