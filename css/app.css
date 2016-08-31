@@ -10,8 +10,16 @@ body {
   color: #555;
 }
 
-.navbar-toggle{
-	background-color: #000;
+/*.navbar-toggle{
+	background-color: #FFF;
+}*/
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #000;
+  border-radius: 1px;
 }
 
 /* index */
@@ -19,6 +27,7 @@ body {
 .titles {
 	position: absolute;
 	bottom: 0;
+	display: inline-block;
 	/*left: 100px;*/
 }
 
@@ -44,14 +53,18 @@ body {
 	position: absolute;
 	bottom: 0;
 	right: 100px;
+	display: inline-block;
+
 }
 
 	.navbar-nav ul {
+		display: inline-block;
 	}
 
 	.navbar-nav li {
 		float: none;
 		display: inline-block;
+		/*display: block;*/
 	}
 
 a {
@@ -212,14 +225,14 @@ h3 {
 /* adjustments for mobile */
 
 @media (max-width: 767px) {
-	.navbar-nav {
+/*	.navbar-nav {
 
 	}
 
 	.my-navbar {
 		padding-top: 0px;
 		padding-left: 0px;
-	}
+	}*/
 
 	#hamsterland {
 		padding-top: 0px;
@@ -228,7 +241,8 @@ h3 {
 	}
 
 	.titles {
-		left: 0px;
+		position: static;
+		/*left: 0px;*/
 	}
 
 	  .titles h1 {
@@ -239,10 +253,22 @@ h3 {
 		height: 16px;
 	  }
 
+	.navbar-nav {
+		position: static;
+	}
+
+/*	.navbar-nav>li>a {
+	    padding: 17px 2px 3px 2px;
+	}*/
+
 	#biopic {
 		width: 100%;
 		padding: 10px;
 	}
+
+	#bio-text {
+	padding: 10px;
+}
 
 	body {
 		font-size: 10pt;
