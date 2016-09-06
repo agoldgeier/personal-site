@@ -1,0 +1,26 @@
+{
+	"robot jam sesh": {
+		"title": "robot jam sesh",
+		"subtitle": "automatically syncing audio loops",
+		"pic": "img/robot-jam-square.jpg",
+		"isReady": true
+	},
+	"birdwatcher 2.0": {
+		"title": "birdwatcher 2.0",
+		"subtitle": "automatic detection of birds in nature recordings",
+		"pic": "img/thrush-thumb.png",
+		"isReady": false
+	},
+	"signs o' the times": {
+		"title": "signs o' the times",
+		"subtitle": "correlating lyrics and years",
+		"pic": "img/notebook-square.jpg",
+		"isReady": false
+	},
+	"learning your tastes": {
+		"title": "learning your tastes",
+		"subtitle": "using deep learning to recommend deep cuts",
+		"pic": "img/iheart.png",
+		"isReady": false
+	}
+}

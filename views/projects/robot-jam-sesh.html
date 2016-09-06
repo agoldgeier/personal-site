@@ -1,0 +1,189 @@
+<a ng-init='init("robot jam sesh")' href="/#/projects" id="back-to-projects">&lt;&lt;&lt; back to projects</a>
+
+<div class="blog-header">
+	<div class="blog-header-text">
+		<h1>{{project.title}}</h1>
+		<h2>{{project.subtitle}}</h2>
+	</div>
+</div>
+
+<div class="blog-text col-sm-8 col-sm-offset-2">
+	<h4 style="margin-top: 0px">the problem</h4>
+	<p>Pretend, for a moment, that you are a percussion loop. Perhaps you are a disco beat, thumping along at a brisk 128 BPM. You are hanging out with all your disco friends in your disco folder, all in perfect synchrony, all at 128 BPM, and all is groovy. But one day, from the corner of your eye, you spot a sultry dumbek pattern, swaying alone in her own folder at 115 BPM, and your heart skips a downbeat. But you know, deep down, that you can never dance with her. She is from a different genre, maybe a different sample library altogether – but most devastatingly, she is at a different tempo.</p>
+
+	<p>But what if I told you I could help? What if I could bring your tempos together, and in the process, bring you, Mr. Disco Beat, <i>true love?</i></p>
+
+	<p>Well, I have good news. I can. All you need is a little spoonful of beat matching!</p>
+
+	<div class="blog-text-img">
+		<img src="img/beat-matching.png"></img><br>
+		<small>beat matching. comes in spoonfuls.</small>
+	</div>
+
+	<h4>the basics</h4>
+	<p>This story, sadly, is all too common. Too often will the modern day musician, producer, DJ, or hopeless dilettante have a bunch of rad loops like these:</p>
+
+	<div class="blog-text-img">
+		<br>
+		<audio controls="controls" src="el/rjs-loop1.wav">
+	    Your browser does not support the HTML5 Audio element.
+		</audio><br>
+		<audio controls="controls" src="el/rjs-loop2.wav">
+	    Your browser does not support the HTML5 Audio element.
+		</audio><br>
+		<audio controls="controls" src="el/rjs-loop3.wav">
+	    Your browser does not support the HTML5 Audio element.
+		</audio><br>
+		<audio controls="controls" src="el/rjs-loop4.wav">
+	    Your browser does not support the HTML5 Audio element.
+		</audio><br>
+		<small>rad loops.</small>
+		<br>
+	</div>
+
+	<p>…and the first attempt to mash them together results in something horrific:</p>
+
+	<div class="blog-text-img">
+		<br>
+		<audio controls="controls" src="el/rjs-terrible-mashup.wav">
+	    Your browser does not support the HTML5 Audio element.
+		</audio><br>
+		<small>oh no.</small>
+		<br>
+	</div>
+
+	<p>The remedy for this is a two-step process: first, one needs to identify the tempos of all of the component loops, and next one needs to modify the audio, either by slowing down or speeding up, so that each loop plays back at the same tempo. Only then will the combination of the loops be radder than the sum of its parts:</p>
+
+	<div class="blog-text-img">
+		<br>
+		<audio controls="controls" src="el/rjs-great-mashup.wav">
+	    Your browser does not support the HTML5 Audio element.
+		</audio><br>
+		<small>oh, yes.</small>
+		<br>
+	</div>
+
+	<p>This process is called <b>beat matching</b>, and it is one of the most common applications of music technology on the commercial market. Software like Ableton Live and Traktor accomplish this well, and have been doing so for years. In this post, we will take a look under the hood of that first step, <b>tempo estimation</b>, and in particular, we will look at a personal improvement I made to one of the fundamental tempo estimation algorithms in the specific domain of audio loops.</p>
+
+	<h4>details for nerds</h4>
+	<p>As you may know, the <b>tempo</b> of a piece of music is essentially its pace, i.e. the frequency with which a listener would tap along to a song. It is most commonly measured in <b>beats per minute (BPM)</b>. On a mathematical level, we can consider tempo to be related to the most salient periodicity found in the range of frequencies considered danceable, which for a normal sized human in Earth-like gravity is about 60-200 BPM.</p>
+
+	<p>While the current state of the art for tempo estimation bounces between the use of <a href="http://www.tandfonline.com/doi/abs/10.1080/09298210008565462">Fast Fourier Transform-based tempograms</a> and machine learning techniques like <a href="ismir2015.uma.es/articles/196_Paper.pdf">Recurrent Neural Nets</a>, one of the most intuitive and long-lived methods is the <a href="http://mathworld.wolfram.com/Autocorrelation.html">autocorrelation function (ACF)</a>.</p>
+
+	<p>The idea is simple. For a periodic function, if we imagine sliding it along the time axis, at some point, it will eventually look just like it did when we started. This difference in time, AKA <b>lag</b>, which produces the greatest likeness to the original is the <b>period</b> of the function.</p>
+
+	<p>Autocorrelation simply gives a way to measure, for a given lag, that likeness. In mathy terms, it is the dot product of a time series by the itself shifted some \(l\) number of samples:</p>
+
+	<div class="blog-text-img">
+		<p>$$ACF(l)=\sum_{n=0}^{N-l}y[n]y[n+l]$$</p>
+		<small> eq. 1 - hand-wavy form of autocorrelation</small>
+	</div>	        
+
+	<p>where<br>
+	\(y\) is a digital signal,<br>
+	\(n\) is the sample number,<br>
+	\(N\) is the total number of samples in the signal, and<br>
+	\(l\) is the lag in samples.</p>
+
+	<P>[insert interactive thingy where you can fuck with lag and get ACF]</p>
+
+	<p>We can find the lag \(l\) that maximizes \(ACF(l)\), and consider that the "period" of the signal. For music we expect that period to represent the duration of a bar of music; we can expect intuitively that features of music, especially rhythmic features, repeat on a bar level. Anyway, once we find that lag \(l\), we can convert to tempo using the following equation:</p>
+
+	<div class="blog-text-img">
+		<p>$$BPM = \frac{60 * beats * f_s}{l}$$</p>
+		<small> eq. 2 - general conversion from lag to tempo</small>
+	</div>	  
+
+	<p>where<br>
+	\(f_s\) is the sample rate of the audio in samples per second, and<br>
+	\(beats\) is the number of quarter notes in a bar of music.</p>
+
+	<p>For the vast majority of cases, \(beats\) will be 4, representing the 4/4 time signature, or the aptly named common time, which simplifies our equation to:</p>
+
+	<div class="blog-text-img">
+		<p>$$BPM = \frac{240 * f_s}{l}$$</p>
+		<small> eq. 3 - conversion from lag to tempo for common time</small>
+	</div>	 
+
+	<p>As an example, let’s take my favorite loop from above, a "hip-hop" beat at 100 BPM:</p>
+
+	<div class="blog-text-img">
+		<img src="img/rjs-fig1.png"></img><br>
+		<small>fig. 1 - waveform for a tribal house loop</small>
+	</div>
+
+	<p>Given our sample rate (44.1 kHz), we can sweep the range of lags representing tempos from 60-200 BPM to try to find the one that gives the highest autocorrelation:</p>
+
+	<div class="blog-text-img">
+		<img src="img/rjs-fig2.png"></img><br>
+		<small>fig. 2 - autocorrelation vs. tempo</small>
+	</div>
+
+	<p>Here, the maximum is clearly seen at 100 BPM, which is great because it's exactly what we expected!</p>
+
+	<p>Run on a dataset I made from the <a hred="http://www.loopmasters.com/">Loopmasters Sample Library</a>, ACF performs admirably for such a simple little method. Of 246 loops recorded on different intstruments across many genres such as hip-hop, jazz, breakbeat, and latin, ACF exactly predicted 85, and did a <i>pretty good</i> job with 71 others.</p>
+
+	<p>By <i>pretty good</i> I mean errors that are the same type of errors humans would make. That is, double- and half-tempo errors, which we make because the definition of what constitutes a “beat” is inherently ambiguous, and off-by-one errors, which can come up due to the inherent inaccuracy in human performance. Most importantly, these two types of error were found to not affect the aesthetic result when these tempo estimations were applied to beat-matching. So, while considering only perfectly correct errors, vanilla ACF achieved an accuracy of <b>34%</b>; while also counting these reasonable errors, it achieved a far superior <b>63%</b>.</p>
+
+	<h4>let’s do better</h4>
+	<p>While vanilla ACF does alright, we can ask what assumptions we can make about our domain. A little bit of thought reveals that the thing about loops is that not only are there usually 4 (or 2) beats in a bar, but in order for the loop to repeat in a musically meaningful way, the loop will almost always contain something like 1, 2, or 4 bars of musical material.</p>
+
+	<p>Therefore, <i>we can expect the total number of beats in a loop to be equal to a power of two.</i></p>
+
+	<p>Using a similar equation as before, we can find the number of beats in a piece of audio given its duration and a lag relating to a tempo:</p>
+
+	<div class="blog-text-img">
+		<p>$$ b(l) = 4 \frac{d}{l}$$</p>
+		<small> eq. 4 - deriving number of beats from duration and lag</small>
+	</div>	 	 
+
+	<p>where:<br>
+	\(b\) is the number of beats in the audio, and<br>
+	\(d\) is the duration of the audio in samples.
+	</p>
+
+	<p>A perfectly looping audio segment will have an integer number of beats, but even among well-curated loop libraries, the durations of the loops are not exact. For this reason, we cannot just check the exact lags that would correspond to the numbers of beats we are looking for, but we rather need a metric that measures how close a number of beats is to a power of two, which we can thereafter multiply with our ACF output. I came up with the following:</p>
+
+	<div class="blog-text-img">
+		<p>$$ w(l) = 0.5 + \left | 0.5 - frac(log_2 b(l)) \right |$$</p>
+		<small> eq. 5 - my measure of "twoieness"</small>
+	</div>	 	 
+
+	<p>where:<br>
+	\(b\) is the number of beats as outputted by eq. 4, and<br>
+	\(frac(\cdot)\) is the function that returns  the fractional part of a mixed number.
+	</p>
+
+	<p>Here is a visualization of that function. As you can see, it peaks at powers of two and has minima logarithmically spaced in between.</p>
+
+	<div class="blog-text-img">
+		<img src="img/rjs-fig3.png"></img><br>
+		<small>fig. 3 - illustration of "twoieness"</small>
+	</div>
+
+	<p>When applying these weights to the output of vanilla ACF, the results actually do improve quite a bit. Here, for example, is what happens with a 125 BPM tribal house loop that, using vanilla ACF, erroneously gets tagged as 100 BPM. By applying the mask generated from eq. 5, we see that the peaks get properly reweighted, and our new maximum is the correct 125 BPM.</p>
+
+	<div class="blog-text-img">
+		<img src="img/rjs-fig4.png"></img><br>
+		<small>fig. 4 - application of "twoieness." in the bottom graph, the green line represents the reweighting according to the number of resulting beats for a given tempo.</small>
+	</div>
+
+	<p>Across the entire dataset, strict accuracy jumped up to <b>49%</b>, and including reasonable errors, I achieved <b>80%</b> accuracy. These results can be seen visually in this cool graph right here:</p>
+
+	<div class="blog-text-img">
+		<img src="img/rjs-fig5.png"></img><br>
+		<small>fig. 5 - histogram of log2 of the ratio between predicted tempo and actual tempo for naive (blue) and loop-aware (red) autocorrelation.</small>
+	</div>
+
+	<p> This slightly obtuse graph shows the relationship between the predicted tempos and actual tempos across the entire dataset for both methods of autocorrelation discussed in this post. The x-axis is the \(log_2\) of the predicted tempo divided by the actual tempo. That is, if the tempo was predicted correctly, that ratio would be 1, and the \(log_2\) would be 0. Likewise, half- and double-tempo errors are represented by -1 and 1, respectively. In both cases, we can see that correct is the pluralistically the most common outcome.</p>
+
+	<p>In this graph, we can see that we have flattened a couple piles of errors that correspond to specific fractions of the correct tempo that are not half-tempo errors – that is, tempos that might have produced a nice periodicity but would have returned either 11 beats (\(log_2 \frac{11}{16} \approx -0.54\)) or 6 beats (\(log_2 \frac{6}{8} \approx -0.41\)) rather than the respectively desired 16 or 8 beats.</p>
+
+	<h4>wrapping up</h4>
+	<p>The goal of this project was not to attempt to compete with the state of the art in tempo estimation – it was rather to illustrate how much just a little bit of domain knowledge can help a lot. The best methods will indeed use much more complicated algorithms, but oftentimes, we can keep an approach just as simple and intuitive if we step back and apply what we already know and feel about music.</p>
+	<br><br>
+	<p><a href="https://github.com/agoldgeier/Robot-Jam-Sesh/">Check out the code here>>></a></p>
+
+	<div id="disqus_thread"></div>
+
+</div>
