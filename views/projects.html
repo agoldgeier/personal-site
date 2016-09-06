@@ -1,6 +1,5 @@
 <h3> Projects </h3>
-<div class="row">
-  <!-- bird listener -->
+<!-- <div class="row">
   <div class="col-md-4 project-pic">
     <a href="">
       <div class="bg-pic">
@@ -23,7 +22,6 @@
       </div>
     </a>
   </div>
-  <!-- lyric learner -->
   <div class="col-md-4 project-pic">
     <a href="">
       <div class="bg-pic">
@@ -46,7 +44,6 @@
       </div>
     </a>
   </div>
-  <!-- automatic jam sesh -->
   <div class="col-md-4 project-pic">
     <a href="">
       <div class="bg-pic">
@@ -69,7 +66,6 @@
       </div>
     </a>
   </div>
-  <!-- iheart -->
   <div class="col-md-4 project-pic">
     <a href="">
       <div class="bg-pic">
@@ -92,25 +88,33 @@
       </div>
     </a>
   </div>
-</div>
-
-<!-- <div class="row">
-  <div class="col-md-4 projectPic" ng-repeat="project in projects">
-    <a ng-href="{{makeLink(project.name)}}" data-id="{{name}}" ng-click="setProject($event)">
-      <img ng-src="{{project.pic}}" style="width: 100%">
-      <h4 class="author">{{project.name}}</h4>
-      <br>
-    </a>
-  </div>
 </div> -->
 
-<!-- <h2>Artists</h2>
+<!-- Angular Version -->
 <div class="row">
-  <div class="col-md-4 artistPic" ng-repeat="artist in artists">
-    <a ng-href="{{makeLink(artist.name)}}" data-id="{{name}}" ng-click="setArtist($event)">
-      <img ng-src="{{artist.pic}}" style="width: 100%">
-      <h4 class="author">{{artist.name}}</h4>
-      <br>
+  <div class="col-md-4 project-pic" ng-repeat="project in projects">
+    <a ng-href="{{makeLink(project.title)}}">
+      <div class="bg-pic">
+        <img ng-src="{{project.pic}}" style="width: 100%">
+        <div class="pic-mask">
+          <div class="mask-text">
+            <div class="project-title">
+              {{project.title}}
+            </div>
+            <div class="project-subtitle">
+              {{project.subtitle}}
+            </div>
+            <div class="project-button-box">
+              <div ng-hide="project.isReady" class="coming-soon">
+                &ensp;coming soon&ensp;
+              </div>
+              <div ng-show="project.isReady" class="coming-soon">
+                &ensp;read more >>>&ensp;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </a>
   </div>
-</div> -->
+</div>

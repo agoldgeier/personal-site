@@ -53,7 +53,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <span class="titles col-sm-6">
-                        <h1><a href="#/">aviv goldgeier</a>&emsp;&emsp;     
+                        <h1><a href="#!/">aviv goldgeier</a>&emsp;&emsp;     
                             <a href="mailto:aviv.goldgeier@gmail.com" target="_blank" ><img src="img/email-black.png" class="socialbutton"></a>
                             <a href="https://www.facebook.com/fuzzylumps" target="_blank" ><img src="img/facebook-black.png" class="socialbutton"></a>
                             <a href="https://www.linkedin.com/in/avivgoldgeier" target="_blank" ><img src="img/linkedin-black.png" class="socialbutton"></a>
@@ -62,13 +62,13 @@
                     </span>
                     <ul class="nav navbar-nav col-sm-4 col-sm-offset-2">
                         <li>
-                            <a href="#/projects">projects</a>
+                            <a href="#!/projects">projects</a>
                         </li>
                         <li>
-                            <a href="#/cv">cv</a>
+                            <a href="#!/cv">cv</a>
                         </li>
                         <li>
-                            <a href="#/music">music</a>
+                            <a href="#!/music">music</a>
                         </li>
                     </ul>
 <!--                     <ul class="nav navbar-nav">
@@ -121,7 +121,7 @@
                 <hr>
                 <div class="row">
                     <div class="col-lg-12">
-                        <p>&copy; Aviv Goldgeier 2016</p>
+                        <p><a href="https://www.youtube.com/watch?v=j0U4Y0Ispas">&copy; Aviv Goldgeier 2016</a></p>
                     </div>
                 </div>
             </footer>
@@ -142,6 +142,7 @@
     <script src="controllers/music.js"></script>
     <script src="controllers/cv.js"></script>
     <script src="controllers/projects.js"></script>
+    <script src="controllers/project.js"></script>
 
     <script src="services/mainService.js"></script>
 
@@ -150,6 +151,32 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- MathJax for equation display -->
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    <script>
+
+
+
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+/*
+var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//aviv-goldgeier.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+
+    <script type="text/javascript" src="js/dirDisqus.js"></script>
 
 
 </body>

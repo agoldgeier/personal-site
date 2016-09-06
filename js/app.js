@@ -32,11 +32,20 @@ app.config(function($routeProvider, $locationProvider, $sceDelegateProvider) {
 	    'https://www.youtube.com/**',
 	    'https://w.soundcloud.com/**'
 	]);
+
+	$locationProvider.hashPrefix('!')
 });
 
 // Directives
 
 app.directive("project", function() {
+	return {
+		restrict: 'E',
+		templateUrl: "views/projects/project.html"
+	};
+});
+
+app.directive("dir-disqus", function() {
 	return {
 		restrict: 'E',
 		templateUrl: "views/projects/project.html"

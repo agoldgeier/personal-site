@@ -222,6 +222,37 @@ h3 {
 	position: relative;
 }
 
+/* project posts */
+#back-to-projects {
+	padding-left: 100px;
+}
+
+.blog-header {
+	width: 100%;
+	height: 150px;
+	text-align: center;
+}
+
+.blog-header-text {
+	color: #333;
+}
+
+.blog-text {
+	border-width: 0 0 0 1px;
+	border-color: #999;
+	border-style: solid;
+}
+
+	.blog-text h4 {
+		color: #333;
+		margin-top: 40px;
+	}
+
+	.blog-text-img {
+		margin: 0 auto;
+		text-align: center;
+		padding-bottom: 20px;
+	}
 /* adjustments for mobile */
 
 @media (max-width: 767px) {
