@@ -72,7 +72,7 @@
 
 	<p>The idea is simple. For a periodic function, if we imagine sliding it along the time axis, at some point, it will eventually look just like it did when we started. This difference in time, AKA <b>lag</b>, which produces the greatest likeness to the original is the <b>period</b> of the function.</p>
 
-	<p>Autocorrelation simply gives a way to measure, for a given lag, that likeness. In mathy terms, it is the dot product of a time series by the itself shifted some \(l\) number of samples:</p>
+	<p>Autocorrelation simply gives a way to measure, for a given lag, that likeness. In mathy terms, it is the dot product of a time series by itself shifted some \(l\) number of samples:</p>
 
 	<div class="blog-text-img">
 		<p>$$ACF(l)=\sum_{n=0}^{N-l}y[n]y[n+l]$$</p>
@@ -175,7 +175,7 @@
 
 	<p> This slightly obtuse graph shows the relationship between the predicted tempos and actual tempos across the entire dataset for both methods of autocorrelation discussed in this post. The x-axis is the \(log_2\) of the predicted tempo divided by the actual tempo. That is, if the tempo was predicted correctly, that ratio would be 1, and the \(log_2\) would be 0. Likewise, half- and double-tempo errors are represented by -1 and 1, respectively. In both cases, we can see that correct is the pluralistically the most common outcome.</p>
 
-	<p>In this graph, we can see that we have flattened a couple piles of errors that correspond to specific fractions of the correct tempo that are not half-tempo errors – that is, tempos that might have produced a nice periodicity but would have returned either 11 beats (\(log_2 \frac{11}{16} \approx -0.54\)) or 6 beats (\(log_2 \frac{6}{8} \approx -0.41\)) rather than the respectively desired 16 or 8 beats.</p>
+	<p>The graph shows that the loop-aware reweighting of tempos has flattened a couple piles of errors that correspond to specific fractions of the correct tempo that are not half-tempo errors – that is, tempos that might have produced a nice periodicity but would have returned either 11 beats (\(log_2 \frac{11}{16} \approx -0.54\)) or 6 beats (\(log_2 \frac{6}{8} \approx -0.41\)) rather than the respectively desired 16 or 8 beats.</p>
 
 	<h4>wrapping up</h4>
 	<p>The goal of this project was not to attempt to compete with the state of the art in tempo estimation – it was rather to illustrate how much just a little bit of domain knowledge can help a lot. The best methods will indeed use much more complicated algorithms, but oftentimes, we can keep an approach just as simple and intuitive if we step back and apply what we already know and feel about music.</p>
