@@ -16,7 +16,7 @@ angular.module('PersonalSite')
   	// }
 
     $scope.makeLink = function(name) {
-      return "/#/projects/" + name.toLowerCase().replace(/ /g,'-');
+      return "#!/projects/" + name.toLowerCase().replace(/ /g,'-');
     }
 
   	// THIS IS CALLED AFTER TO UPDATE THE SCOPE
