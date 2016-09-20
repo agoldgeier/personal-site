@@ -1,4 +1,4 @@
-var app = angular.module('PersonalSite', ['ngRoute', 'ngMessages']);
+var app = angular.module('PersonalSite', ['ngRoute', 'ngMessages', 'angularUtils.directives.dirDisqus']);
 
 // Routing
 app.config(function($routeProvider, $locationProvider, $sceDelegateProvider) {
