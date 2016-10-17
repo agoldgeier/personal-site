@@ -1,0 +1,184 @@
+<a ng-init='init("birdwatcher 2.0")' href="/#/projects" id="back-to-projects">&lt;&lt;&lt; back to projects</a>
+
+<div class="blog-header">
+	<div class="blog-header-text">
+		<h1>{{project.title}}</h1>
+		<h2>{{project.subtitle}}</h2>
+	</div>
+</div>
+
+<div class="blog-text col-sm-8 col-sm-offset-2">
+	<h4 style="margin-top: 0px">the problem</h4>
+	<p>Birds.</p>
+
+	<p>There are a lot of them.</p>
+
+	<p>But how many? And where do they go?</p>
+
+	<p>These are the questions that have plagued ornithologists since <strike>time immemorial</strike> they became sticklers for that kind of thing.</p>
+
+	<p>The problem is that counting them is very hard. While estimates of bird migration numbers can be made by measuring mass movement from weather radars, these estimates are both imprecise and do not tell us what species of bird we are counting. So, for the most part, the best method is still the old fashioned way: send a guy out into the field and see what he comes up with.</p>
+
+	<div class="blog-text-img">
+		<img src="img/bw2-birdwatcher.jpg"></img><br>
+		<small>we send this guy in particular</small>
+	</div>	
+
+	<p>Of course, this has drawbacks as well. For one, it takes a vast amount of expertise to be able to produce reliable estimates, but more importantly, even with a true master out there, humans kind of suck at stuff in general. We get bored, distracted, hungry, and we get sleepy and have to take naps.</p>
+
+	<p>So, the question is: how can we obtain accurate, species-specific bird migration estimates without having to rely on primitive meat sacks to do the counting for us?</p>
+
+	<div class="blog-text-img">
+		<img src="img/bw2-totally-real-bird.jpg"></img><br>
+		<small>a bird</small>
+	</div>	
+
+	<h4>the basics</h4>
+	<p>For this project, entitled <a href="https://wp.nyu.edu/birdvox/">BirdVox</a>, I worked with <a href="http://steinhardt.nyu.edu/marl/">NYU’s Music and Audio Research Lab (MARL)</a> in collaboration with the <a href="http://birds.cornell.edu">Cornell Lab of Ornithology (CLO)</a>, which is perhaps my very favorite lab of ornithology. I was supervised by <a href="http://www.justinsalamon.com">Dr. Justin Salamon</a> and <a href="https://wp.nyu.edu/jpbello/">Dr. Juan Bello</a>.</p>
+
+	<p>When I came on the scene, CLO had been working on this problem for some time. The idea was to hide a number of Raspberry Pi recording stations along a migration route on the eastern seaboard and run a program that listened to the surrounding nature and logged every instance of a flight call by species. The total number of flight calls per species would be directly proportional to the total number of passing birds, and thus we could find our desired species-specific migration number data.</p>
+
+	<p>My task was to help decide and implement the details of that program.</p>
+
+	<p>Now, there are several reasons why this problem is particularly tricky. First off, we need to be clear about what exactly we were trying to detect. It was not bird song, the chippity cheepity tweets we all know and love, but rather flight calls, which are tiny bursts of sound that birds only make while flying. They sound like this:</p>
+
+	<div class="blog-text-img">
+		<audio controls="controls" src="el/bw2-flight-call.wav">
+	    Your browser does not support the HTML5 Audio element.
+		</audio><br>
+		<small>does this just sound like static to you? yup, that’s the problem</small>
+	</div>
+
+	<p>Next, we must realize how much more appears in the audio than just flight calls. Aside from the constant broadband noise of wind, streams, traffic and the like, which are annoying enough to deal with, we can also have lots of other animals – crickets, frogs, chipmunks – or maybe car horns, or falling boughs, or what have you. On the other hand, flight calls themselves are far from homogenous. Each species has its own little trademark call.</p>
+
+	<p>The end result is that from an extremely noisy environment, we have to pick up a specific type of audio event (throw away everything that is not a flight call), but not one that is too specific (do not tune algorithm to recognize only one kind of flight call).</p>
+
+	<p>For our research, CLO provided us with four annotated full-night recordings, totaling about 38.5 hours of audio containing 4300 instances of flight calls. This proved to introduce yet another difficulty: the audio had a relatively low sample rate (24 kHz), meaning that due to <a href="http://www.dspguide.com/ch3/2.htm">Nyquist’s sampling theorem</a>, only harmonics of our flight calls up to 12 kHz would be present in the audio. Given that the fundamental frequencies of the flight calls already tend to be in the several kHz range, this does not give us much information to work with.</p>
+
+	<p>And of course, the final issue: the detection algorithm would have to run in real time on a microprocessor. For this reason, we discarded more advanced methods like Convolutional Neural Nets, or even Spherical K-Means, which happened to work quite well in <a href="http://www.justinsalamon.com/news/unsupervised-feature-learning-for-urban-sound-classification">Dr. Salamon’s similar project regarding urban sound identification</a>.</p>
+
+	<p>Despite all this, I did indeed manage to develop a surprisingly simple working solution that improved on CLO’s method by an order of magnitude.  Read on to find out how!</p>
+
+
+	<h4>details for nerds</h4>
+
+	<p>Before telling you what worked best in the end and <a href="https://xkcd.com/109/">spoiling it for you</a>, first I’ll go over some approaches that didn’t work quite as hoped.</p>
+
+	<p>CLO’s approach prior to our involvement was based on template detectors. Basically, for each species of bird they were detecting for, they designed a prototypical <a href="https://en.wikipedia.org/wiki/Spectrogram">spectrogram</a> that represented that species&rsquo; flight call. Then, for each species, they found the times in the incoming audio that were most similar to that spectrogram template.</p>
+
+	<p>Sounds reasonable, right?</p>
+
+	<div class="blog-text-img">
+		<img src="img/bw2-spec-example.png" style="width:30%"></img><br>
+		<small>example spectrogram. our flight call is the diagonal purply bit toward the top</small>
+	</div>	
+
+	<p>Well, it turned out not to be. For each correct flight call detection returned by this process, about 3000 false alarms were logged. When I ran the process on my end, I found that the template detector method worked only negligibly better than random.</p>
+
+	<p>An aside - our metric for measure the success of an algorithm was the <a href="https://en.wikipedia.org/wiki/F1_score">F-measure</a>, which is the <a href="https://en.wikipedia.org/wiki/Harmonic_mean">harmonic mean</a> of precision (percentage of detections that are actually flight calls) and recall (percentage of flight calls that were actually detected). Random noise would return around 4% F-measure, whereas CLO’s method was in the 6-8% range.</p>
+
+	<p>Anyway, there are a few reasons for this, but the main one is that a spectrogram contains a lot of information, and especially in such a noisy environment, most of the information in the template does not actually correspond to flight call information. If, say, the template included some kind of background noise, then a change in the direction of the wind could trigger the template just as easily as a flight call would.</p>
+
+	<p>My first approaches ran into similar problems – for example, when training a classifier on features derived from <a href="http://recognize-speech.com/feature-extraction/mfcc">MFCCs</a>, we returned detections even when there wasn’t really anything going on in the audio besides the standard background noise.</p>
+
+	<p>So, it made sense to break up the problem into two steps. First, we would write a more general detection algorithm to find any actual events in the audio, and then we would run classifiers on tiny clips of audio surrounding these event onsets.</p>
+
+	<p>One of my favorite onset detection methods is <a href="https://en.wikipedia.org/wiki/Spectral_flux">spectral flux</a>, a simple and fast algorithm that measures the amount that the audio spectrum changes from moment to moment, regardless of amplitude. This idea is especially applicable here, where with the tremendous amount of background noise, the presence of a flight call would not make the audio significantly louder, but would instead add a melodious, if brief, element into the mix.</p>
+
+	<p>The equation for spectral flux:</p>
+
+	<div class="blog-text-img">
+		<p>$$SF(m)=\frac{2}{m}\sum_{k=0}^{N/2}[H(\left |X_{k}(m)\right |-\left |X_{k}(m-1)\right |)]^2$$</p>
+		<small>spectral flux equation. from <a href="http://www.nyu.edu/classes/bello/MIR_files/novelty.pdf">dr. bello's slides on novelty detection</a></small>
+	</div>	  
+
+	<p>where<br>
+	\(m\) is the index of a frame of audio,<br>
+	\(k\) is the index of frequency bucket,<br>
+	\(X\) is the spectrogram of signal \(x\),<br>
+	\(H(\cdot)\) is the half-wave rectify function, and<br>
+	\(N\) is the number of samples in each frame of audio.</p>
+
+	<p>Let's just do a quick little walkthrough of how that works. We start with a waveform...</p>
+
+	<div class="blog-text-img">
+		<img src="img/bw2-waveform.png"></img><br>
+		<small>note: this isn't a waveform representing a flight call. i don't quite remember what this is supposed to be.</small>
+	</div>	
+
+	<p>...generate the log spectrogram...</p>
+
+	<div class="blog-text-img">
+		<img src="img/bw2-logspec.png"></img><br>
+	</div>	
+
+	<p>...take the first difference along the time dimension (this shows us how much the amplitude of any single range of frequencies is changing)...</p>
+
+	<div class="blog-text-img">
+		<img src="img/bw2-logspecdiff.png"></img><br>
+	</div>	
+
+	<p>...half-wave rectify it (this filters it out so only positive changes in amplitude remain - after all, we are looking for the beginnings of events, where there will be some increase in energy at some part of the spectrum)...</p>
+
+	<div class="blog-text-img">
+		<img src="img/bw2-logspecdiffhr.png"></img><br>
+	</div>	
+
+	<p>...square each element (this makes the biggest amplitude increases stand out more)...</p>
+
+	<div class="blog-text-img">
+		<img src="img/bw2-logspecdiffhrsq.png"></img><br>
+	</div>	
+
+	<p>...and finally sum it all up across the frequency dimension (this collects all the amplitude changes at a certain point in time into a single number).</p>
+
+	<div class="blog-text-img">
+		<img src="img/bw2-det.png"></img><br>
+	</div>	
+
+	<p>Simply finding the moments with the highest spectral flux brought us to an F-measure of 26.7%, a significant improvement. As this simply detected all events in the audio, agnostic to the fact that we were looking for birds, further improvement seemed very possible by incorporating some domain knowledge.</p>
+
+	<div class="blog-text-img">
+		<img src="img/bw2-pos-mean.png" style="width:20%"></img><img src="img/bw2-neg-mean.png"style="width:20%"></img><br>
+		<small>comparison of average flight call (left) and average segment of audio without a flight call (right). in these images, low frequencies are located at the top.</small>
+	</div>	
+
+	<p>An analysis of all the flight call spectrograms reveals a bit more about where we should be looking. Pictured above is the mean spectrogram of every single segment of audio containing a flight call, next to the mean spectrogram of an equal number of audio segments that do not contain flight calls. The reddish splotch present in the image on the left shows the area of interest.</p>
+
+	<p>So we can theoretically improve the results of spectral flux by modifying the spectrograms we feed into it. First, we can just truncate the spectrogram, removing the two areas of broadband noise seen in the images. Empirically, we found that lopping off the entire lower half of the audio spectrum worked best, keeping just the range of 6-12kHz. This pushed our results up even further to 34.3% F-measure.</p>
+
+	<p>The last step of spectral flux is a summation across the frequency dimension, and we can now use some machine learning to turn this into a weighted sum, where frequency bins with higher weights are deemed more important to our final decision of whether or not a spectrogram contains a flight call. I trained some weights using <a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent">Stochastic Gradient Descent (SGD)</a> with <a href="https://en.wikipedia.org/wiki/Loss_functions_for_classification#Logistic_loss">logistic loss</a> and <a href="https://msdn.microsoft.com/en-us/magazine/dn904675.aspx">L2 regularization penalty</a>:</p>
+
+	<div class="blog-text-img">
+		<img src="img/bw2-spec-weights.png"></img><br>
+		<small>our weights after 50 epochs of convergence. black&lt;red&lt;yellow&lt;white. on the y-axis, 0=6kHz, 64=12kHz</small>
+	</div>	
+	<!-- [make new plot – line graph, get axes right] -->
+
+	<p>The results here confirm what we might expect – that the most important information is in about the 6-9kHz realm, and the most distracting information at the extreme of frequency, where more noise is visible in the mean spectrograms above. In the end, using spectral flux with a weighted, truncated spectrogram gave us an F-measure of 38.9%, which is awesome compared to what we started with. Remember that this number will improve even more after being fed into phase 2, species classification.</p>
+
+	<div class="blog-text-img">
+		<img src="img/bw2-alg-comparison.png"></img><br>
+		<small>comparison of algorithms</small>
+	</div>	
+
+	<p>Here’s a graph comparing all of the approaches mentioned. The yellow curve is CLO’s method, the blue line is Spherical K-means (Dr. Salamon’s powerful but too slow method), and mine are the other three. Here, F-measure is the area under any one of these curves. We see that while Spherical K-means s the best model in general, weighted truncated SF does better at picking out the top 10% or so most salient flight calls.</p>
+
+	<p>Lastly, we can do a quick back of the envelope calculation to make sure that my method would be able to run in real time on a Raspberry Pi. On my machine (Late 2011 MacBook w/ 2.4 GHz processor), I was able to process almost 70 frames of audio in the time it would have taken for one frame of audio to elapse. So we’re good there. A Raspberry Pi <a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/">will be slower by a factor of about 2-3 times</a>, which is a number way less than 70, so we’re still good.</p>
+
+
+	<h4>wrapping up</h4>
+
+	<p>This research is far from over – this is just the spot at which I moved on from the project. There remain many more trails to follow. A promising one would be training on features generated from <a href="http://www.cp.jku.at/research/papers/Boeck_Widmer_DAFx_2013.pdf">Sebastian B&ouml;ck&rsquo;s Superflux algorithm</a>, which performs categorically better than spectral flux at almost no increased complexity. And given the right features, a <a href="https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm">Random Forest</a> might be a great option, considering our ground truth is heterogeneous and separable into distinct classes. </p>
+
+	<p>Of course, the processing power of microcomputers is always increasing, and it is likely that in the very near future, they will be easily capable of running some of the more heavy-hitting machine learning algorithms like Convolutional or Recurrent Neural Nets, which have given the best results in audio recognition in recent times.</p>
+
+	<p>Anyway, I am quite happy with my results for this project. As far as I know, my work has not yet been officially incorporated by CLO, but last I heard, the folks over there were “psyched” with my progress.</p>
+
+	<p>Research on the BirdVox project is ongoing – <a href="https://wp.nyu.edu/birdvox/">catch up with the most recent results here>>></a>.</p>
+
+	<p><a href="https://github.com/justinsalamon/fconsetdetection/tree/learn-templates/src" target="_blank">Check out the admittedly poorly organized code here>>></a></p>
+
+	<div id="disqus_thread"></div>
+
+</div>

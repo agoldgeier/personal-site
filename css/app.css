@@ -253,6 +253,10 @@ h3 {
 		text-align: center;
 		padding-bottom: 20px;
 	}
+
+	.blog-text-img img {
+		max-width: 60%;
+	}
 /* adjustments for mobile */
 
 @media (max-width: 767px) {
