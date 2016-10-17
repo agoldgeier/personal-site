@@ -9,7 +9,7 @@
 		"title": "birdwatcher 2.0",
 		"subtitle": "automatic detection of birds in nature recordings",
 		"pic": "img/thrush-thumb.png",
-		"isReady": false
+		"isReady": true
 	},
 	"signs o' the times": {
 		"title": "signs o' the times",
