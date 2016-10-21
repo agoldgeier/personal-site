@@ -21,6 +21,6 @@
 		"title": "learning your tastes",
 		"subtitle": "using deep learning to recommend deep cuts",
 		"pic": "img/iheart.png",
-		"isReady": false
+		"isReady": true
 	}
 }
