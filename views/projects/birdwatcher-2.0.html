@@ -162,7 +162,7 @@
 		<small>comparison of algorithms</small>
 	</div>	
 
-	<p>Here’s a graph comparing all of the approaches mentioned. The yellow curve is CLO’s method, the blue line is Spherical K-means (Dr. Salamon’s powerful but too slow method), and mine are the other three. Here, F-measure is the area under any one of these curves. We see that while Spherical K-means s the best model in general, weighted truncated SF does better at picking out the top 10% or so most salient flight calls.</p>
+	<p>Here’s a graph comparing all of the approaches mentioned. The yellow curve is CLO’s method, the blue line is Spherical K-means (Dr. Salamon’s powerful but too slow method), and mine are the other three. While the F-measure of a method is determined by its performance at the optimal threshold, the area under any one of these curves is another indicator for how useful the corresponding method is in general. We see that while Spherical K-means s the best model in general, weighted truncated SF does better at picking out the top 10% or so most salient flight calls.</p>
 
 	<p>Lastly, we can do a quick back of the envelope calculation to make sure that my method would be able to run in real time on a Raspberry Pi. On my machine (Late 2011 MacBook w/ 2.4 GHz processor), I was able to process almost 70 frames of audio in the time it would have taken for one frame of audio to elapse. So we’re good there. A Raspberry Pi <a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/">will be slower by a factor of about 2-3 times</a>, which is a number way less than 70, so we’re still good.</p>
 
