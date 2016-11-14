@@ -22,5 +22,11 @@
 		"subtitle": "using deep learning to recommend deep cuts",
 		"pic": "img/iheart.png",
 		"isReady": true
+	},
+	"cliche rater": {
+		"title": "cliche rater",
+		"subtitle": "how lame are YOUR lyrics?",
+		"pic": "img/summer-fruit.png",
+		"isReady": true
 	}
 }

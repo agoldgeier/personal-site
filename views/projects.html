@@ -1,96 +1,5 @@
 <h3> Projects </h3>
-<!-- <div class="row">
-  <div class="col-md-4 project-pic">
-    <a href="">
-      <div class="bg-pic">
-        <img src="img/thrush-thumb.png" style="width: 100%">
-        <div class="pic-mask">
-          <div class="mask-text">
-            <div class="project-title">
-              birdwatcher 2.0
-            </div>
-            <div class="project-subtitle">
-              automatic detection of birds in nature recordings
-            </div>
-            <div class="project-button-box">
-              <div class="coming-soon">
-                &ensp;coming soon&ensp;
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div class="col-md-4 project-pic">
-    <a href="">
-      <div class="bg-pic">
-        <img src="img/notebook-square.jpg" style="width: 100%">
-        <div class="pic-mask">
-          <div class="mask-text">
-            <div class="project-title">
-              signs o' the times
-            </div>
-            <div class="project-subtitle">
-              correlating lyrics and years
-            </div>
-            <div class="project-button-box">
-              <div class="coming-soon">
-                &ensp;coming soon&ensp;
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div class="col-md-4 project-pic">
-    <a href="">
-      <div class="bg-pic">
-        <img src="img/robot-jam-square.jpg" style="width: 100%">
-        <div class="pic-mask">
-          <div class="mask-text">
-            <div class="project-title">
-              robot jam sesh
-            </div>
-            <div class="project-subtitle">
-              automatically syncing audio loops
-            </div>
-            <div class="project-button-box">
-              <div class="coming-soon">
-                &ensp;coming soon&ensp;
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div class="col-md-4 project-pic">
-    <a href="">
-      <div class="bg-pic">
-        <img src="img/iheart.png" style="width: 100%">
-        <div class="pic-mask">
-          <div class="mask-text">
-            <div class="project-title">
-              learning your tastes
-            </div>
-            <div class="project-subtitle">
-              using deep learning to recommend deep cuts
-            </div>
-            <div class="project-button-box">
-              <div class="coming-soon">
-                &ensp;coming soon&ensp;
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </a>
-  </div>
-</div> -->
 
-<!-- Angular Version -->
 <div class="row">
   <div class="col-md-4 project-pic" ng-repeat="project in projects">
     <a ng-href="{{makeLink(project.title)}}">
@@ -109,7 +18,7 @@
                 &ensp;coming soon&ensp;
               </div>
               <div ng-show="project.isReady" class="coming-soon">
-                &ensp;read more >>>&ensp;
+                &ensp;check it out >>>&ensp;
               </div>
             </div>
           </div>

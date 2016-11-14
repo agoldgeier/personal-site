@@ -10,6 +10,10 @@ body {
   color: #555;
 }
 
+a {
+	font-weight: 500;
+}
+
 /*.navbar-toggle{
 	background-color: #FFF;
 }*/
@@ -257,6 +261,25 @@ h3 {
 	.blog-text-img img {
 		max-width: 60%;
 	}
+
+/* project - cliche */
+.lyrics-results {
+	padding: 0 auto;
+}
+
+#canvas {
+	border: 0px solid; 
+	width: 100%;
+	float: center;
+	margin: 0 auto;
+}
+
+#result-message {
+	text-align: center;
+	font-size: 16pt;
+}
+
+
 /* adjustments for mobile */
 
 @media (max-width: 767px) {
