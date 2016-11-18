@@ -1,7 +1,7 @@
 {
-  "name": "2fcollective",
+  "name": "personal-site",
   "version": "1.0.0",
-  "description": "2fcollective",
+  "description": "personal-site",
   "main": "server.js",
   "dependencies": {
     "express": "^4.12.4",
@@ -17,12 +17,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/devintyler/2fcollective.git"
+    "url": "https://github.com/agoldgeier/personal-site.git"
   },
-  "author": "Devin and Aviv",
+  "author": "Aviv",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/devintyler/2fcollective/issues"
+    "url": "https://github.com/agoldgeier/personal-site/issues"
   },
-  "homepage": "https://github.com/devintyler/2fcollective"
+  "homepage": "https://github.com/agoldgeier/personal-site"
 }
