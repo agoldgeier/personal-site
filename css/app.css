@@ -263,9 +263,14 @@ h3 {
 	}
 
 /* project - cliche */
+.lyric-input-and-results {
+	margin-bottom: 30px;
+}
+
 .lyrics-results {
 	padding: 0 auto;
 }
+
 
 #canvas {
 	border: 0px solid; 

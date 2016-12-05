@@ -16,7 +16,7 @@ angular.module('PersonalSite')
 	        };
 
  	$scope.result = 0;
- 	$scope.rating_color = 'white'
+ 	$scope.rating_color = 'gainsboro'
  	$scope.result_message = ""
 
 	$scope.rate = function(lyrics) {
@@ -39,7 +39,7 @@ angular.module('PersonalSite')
 
 	$scope.get_result_message = function() {
 		if ($scope.result == 0) {
-			return ''
+			return 'Paste lyrics in the box!'
 		} else if ($scope.result < 35) {
 			return 'Is this even a song?'
 		} else if ($scope.result < 50) {
@@ -57,7 +57,7 @@ angular.module('PersonalSite')
 
 	$scope.get_color = function() {
 		if ($scope.result == 0) {
-			return 'white'
+			return 'gainsboro'
 		} else if ($scope.result < 35) {
 			return 'dodgerblue'
 		} else if ($scope.result < 50) {
@@ -77,7 +77,9 @@ angular.module('PersonalSite')
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		var text_x = 115;
 		if ($scope.result == 100) {
-		  text_x = 95;
+		  text_x = 87;
+		} else if ($scope.result == 0) {
+			text_x = 140;
 		}
 		ctx.strokeStyle=$scope.rating_color;
 		ctx.fillStyle = $scope.rating_color;

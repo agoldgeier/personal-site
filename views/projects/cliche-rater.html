@@ -19,3 +19,23 @@
 		<div id="result-message">{{result_message}}</div>
 	</div>
 </div>
+<div class="lyric-input-and-results col-sm-9 col-sm-offset-1 col-xs-12">
+Paste lyrics into the box above to find out how cliche a set of lyrics are on a scale from 0 to 100 as calculated by my Proprietary Formula&copy;.
+</div>
+
+<div class="blog-text col-sm-8 col-sm-offset-2">
+	<h4 style="margin-top: 0px">ok so how does it work</h4>
+	<p>I'm happy you asked. The cliche score is calculated as follows:</p>
+
+	<div class="blog-text-img">
+		<p>$$score(word)=100 * logistic\left (k \ln\left (\frac{p(word|lyrics)}{p(word|English)}\right )\right )\\
+=\frac{100}{1+e^{-k\ln\left (\frac{p(word | lyrics)}{p(word| English)}\right )}}\\
+=\frac{100}{1+\left (\frac{p(word | English)}{p(word|lyrics)}  \right )^k}$$</p>
+		<small>my Proprietary Formula&copy;</a></small>
+	</div>
+
+	<p>
+	\(p(word | lyrics)\) is found by getting the frequency distribution of all of the words in the <a href="http://labrosa.ee.columbia.edu/millionsong/musixmatch">musixMatch Dataset</a>, and likewise, \(p(word | English)\) comes from the frequency distribution of <a href="http://www.wordfrequency.info/free.asp">the top 5000 most common English words</a>. \(k\) is a matter of personal preference; I chose \(k=2\). The score for a set of lyrics is the weighted average of the scores of the individual words.</p>
+
+	<p>The end result here is that a score of 50 means that the frequency distribution of the words in the set of lyrics is roughly the same as it would be in a normal piece of natural English text. On the other hand, a high score means that the words in the lyrics tend to be used more commonly in lyrics than in other contexts.</p>
+</div>
