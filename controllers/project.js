@@ -21,4 +21,8 @@ angular.module('PersonalSite')
       return "#!/projects/" + name.toLowerCase().replace(/ /g,'-');
     }
 
+    $( document ).ready(function() {
+      MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    });
+
   });
