@@ -4,6 +4,7 @@
   "description": "personal-site",
   "main": "server.js",
   "dependencies": {
+    "angular-utils-disqus": "^1.0.1",
     "express": "^4.12.4",
     "grunt-cli": "^0.1.13",
     "gzippo": "^0.2.0"
