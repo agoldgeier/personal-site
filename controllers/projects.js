@@ -7,13 +7,7 @@ angular.module('PersonalSite')
 
     Page.setTitle('Projects');
 
-  	$scope.name = $routeParams.project; // temporary
-    // console.log('Current artist: ' + $scope.name);
-
-  	// $scope.setArtist = function(e) {
-  	// 	var name = $(e.target).data('id');
-  	// 	console.log(name);
-  	// }
+  	$scope.name = $routeParams.project;
 
     $scope.makeLink = function(name) {
       return "#!/projects/" + name.toLowerCase().replace(/ /g,'-');
