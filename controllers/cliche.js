@@ -4,6 +4,8 @@ angular.module('PersonalSite')
     var canvas = document.getElementById('canvas');
     var ctx = canvas.getContext('2d');
 
+    $scope.isLoading = false;
+
 	var escapable = /[\\\"\x00-\x1f\x7f-\uffff]/g,
 	        meta = {    // table of character substitutions
 	            '\b': '\\b',
@@ -21,6 +23,11 @@ angular.module('PersonalSite')
 
 	$scope.rate = function(lyrics) {
 		// console.log(lyrics);
+		$scope.isLoading = true;
+
+		// FOR TESTING WE SET TIMEOUT
+		// setTimeout(function() {
+
 		clicheServiceURL = "http://aviv-goldgeier-flask-apis.herokuapp.com/cliche";
 
 		$http({
@@ -33,8 +40,11 @@ angular.module('PersonalSite')
 			$scope.rating_color = $scope.get_color($scope.result)
 			$scope.result_message = $scope.get_result_message($scope.result)
 			$scope.draw($scope.result)
+			$scope.isLoading = false;
       		// console.log('yes!');
    		});
+
+		// }, 1000);
 	}
 
 	$scope.get_result_message = function() {

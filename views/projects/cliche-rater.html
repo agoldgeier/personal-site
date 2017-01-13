@@ -15,8 +15,12 @@
 		</form>
 	</div>
 	<div class="lyric-results col-sm-6">
-		<canvas id="canvas"></canvas>
-		<div id="result-message">{{result_message}}</div>
+		<div id="boat" ng-show="isLoading">
+			<img src='img/loading.gif'></img>
+			<p>loading :)</p>
+		</div>
+		<canvas id="canvas" ng-hide="isLoading"></canvas>
+		<div id="result-message" ng-hide="isLoading">{{result_message}}</div>
 	</div>
 </div>
 <div class="lyric-input-and-results col-sm-9 col-sm-offset-1 col-xs-12">
