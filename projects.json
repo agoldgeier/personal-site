@@ -1,4 +1,10 @@
 {
+	"data journalism": {
+		"title": "data journalism at hinge",
+		"subtitle": "how does love even work",
+		"pic": "img/hinge.jpg",
+		"isReady": true
+	},
 	"robot jam sesh": {
 		"title": "robot jam sesh",
 		"subtitle": "automatically syncing audio loops",
